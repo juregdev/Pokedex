@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/scss/main.css">
+  <title>PokeDex - API Using</title>
+</head>
+
+<body>
+  <main>
+    <div class="conteiner">
+      <img src="./assets/img/logo.png" alt="Pokemon logo">
+
+      <div class="search">
+        <input type="text" id="pokeSearch" value="">
+        <button title="Busque o pokemon" onclick="entrar()" href="./details.html">
+          <img src="./assets/img/pokedex.png" alt="Buscar">
+        </button>
+      </div>
+      <div class="content">
+        <!-- <div class="card">
+          <h1 id="pokeName">Name</h1>
+          <div class="text">
+            <div>
+              <div>
+                <img src="./assets/img/pokemon-types/Normal.png" alt="">
+              </div>
+              <P id="pokeID">10</P>
+            </div>
+          </div>
+          <img src="http://lorempixel.com.br/500/400/?2" id="pokeImg" class="imgHover" alt="Test">
+          -->
+
+      </div>
+
+      <div id="loading">
+        <img src="./assets/img/loading/pokebola.png" id="imgLoad" alt="">
+        <h1 id="textLoad"></h1>
+      </div>
+      <button class="more" onclick="more()">Ver mais</button>
+    </div>
+    </div>
+
+  </main>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

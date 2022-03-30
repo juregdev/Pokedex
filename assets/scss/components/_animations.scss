@@ -1,0 +1,86 @@
+@keyframes search {
+
+  0% {
+    transform: rotate(0deg)
+  }
+
+  25% {
+    transform: rotate(5deg)
+  }
+
+  50% {
+    transform: rotate(-5deg)
+  }
+
+  75% {
+    transform: rotate(5deg)
+  }
+
+  100% {
+    transform: rotate(0deg)
+  }
+
+}
+
+@keyframes Pokeball {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(720deg)
+  }
+
+}
+
+@keyframes pokemon {
+
+  0% {
+    transform: rotate(0deg)
+  }
+
+  25% {
+    transform: rotate(5deg)
+  }
+
+  50% {
+    transform: rotate(-5deg)
+  }
+
+  75% {
+    transform: rotate(5deg)
+  }
+
+  100% {
+    transform: rotate(0deg)
+  }
+
+}
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}

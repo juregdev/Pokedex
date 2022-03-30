@@ -1,0 +1,25 @@
+.error {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  border: 1px solid $red;
+  border-radius: 10px;
+  width: 50vw;
+  height: 50vh;
+  @include flex(column);
+
+  img {
+    width: 20%;
+  }
+
+  h1 {
+    font-size: 2vw;
+    padding: auto 4rem;
+    text-align: center;
+  }
+
+
+}

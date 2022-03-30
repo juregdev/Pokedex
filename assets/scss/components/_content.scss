@@ -1,0 +1,184 @@
+.conteiner {
+  img {
+    display: block
+  }
+
+  @include flex(column);
+
+
+  .search {
+    @include flex(row);
+    height: 6vh;
+    border: 1px solid $blue;
+    width: 20vw;
+
+    input {
+      width: 13vw;
+      height: 100%;
+      border-radius: 0;
+      border: none;
+      font-size: 30px;
+
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      width: 7vw;
+      height: 100%;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background .5s ease-in-out;
+
+      &:hover {
+        background: $blue;
+      }
+
+      @include flex(row);
+
+      &:hover img {
+        animation: search 3s ease-in-out;
+      }
+
+      img {
+        width: 30%;
+        display: block
+      }
+
+    }
+
+  }
+
+  .content {
+    width: 100vw;
+    margin-top: 3rem;
+    @include flex(row);
+    flex-wrap: wrap;
+    gap: 1rem;
+
+
+
+    .card {
+      text-align: center;
+      width: 18%;
+      height: 15%;
+      border-radius: 8px;
+      background: $white;
+      padding: 2rem;
+      font-family: verdana, "sans-serif";
+
+      a {
+        text-decoration: none;
+        color: $black;
+        transition: color .5s ease-in-out;
+
+        &:hover {
+          color: $red;
+        }
+      }
+
+      .imgHover {
+        transition: transform 1.5s ease-in-out;
+      }
+
+      &:hover .imgHover {
+        transform: scale(1.1)
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 20px
+      }
+
+      img {
+        width: 100%
+      }
+
+      .text {
+
+        margin-bottom: 1rem;
+
+        div {
+          margin: 0;
+          @include flex(row);
+
+          p {
+            font-size: 1.5vw;
+            margin-right: 2rem;
+          }
+
+
+
+
+          img {
+            width: 10%;
+            margin: 0;
+          }
+
+
+
+        }
+      }
+    }
+
+  }
+
+
+}
+
+
+#LogoDetails {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+
+  img {
+    width: 20vw
+  }
+}
+
+.cardDetails {
+
+  position: absolute;
+  background: $white;
+  width: 30%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  padding: 3rem;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+
+  h1#pokeNameDetails {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  div {
+    margin: 2rem auto;
+    width: 100%;
+    @include flex(row);
+    gap: 4rem;
+
+    div {
+      margin: 0;
+      width: 50%;
+
+      img {
+        margin: 0;
+      }
+    }
+
+    p {
+      font-size: 40px
+    }
+
+  }
+
+  .imgHover {
+    width: 80%
+  }
+}

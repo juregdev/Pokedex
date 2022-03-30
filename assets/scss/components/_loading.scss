@@ -1,0 +1,29 @@
+#loading {
+  position: fixed;
+  @include flex(column);
+  width: 120vw;
+  height: 100%;
+  top: 0;
+  background: $blue;
+
+
+  .pokebola {
+    width: 10%;
+    margin-bottom: 0;
+    animation: Pokeball 10s infinite;
+  }
+
+  .pokemon {
+    margin-bottom: 0;
+    width: 10%;
+    animation: pokemon 3s infinite;
+  }
+}
+
+.visibleLoading {
+  animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.invisibleLoading {
+  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
