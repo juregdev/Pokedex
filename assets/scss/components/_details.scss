@@ -1,7 +1,5 @@
 #LogoDetails {
-  position: absolute;
-  top: 0;
-  left: 2rem;
+  position: relative;
 
   img {
     width: 20vw
@@ -14,7 +12,7 @@
   background: $white;
   width: 30vw;
   height: 70vh;
-  top: 15vh;
+  top: -2rem;
   padding: 3rem;
   border-radius: 8px;
   box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
@@ -52,7 +50,6 @@
         border-radius: 8px;
         height: 45%;
         width: 70%;
-        margin: .5rem auto;
         gap: 1rem;
         @include flex(row);
 
@@ -256,12 +253,13 @@
 
     #idDetails {
 
-
-      padding: 2rem;
+      height: 100%;
+      padding: 3rem;
       text-align: center;
       @include flex(column);
       box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
       border-radius: 10px;
+      margin-right: 0;
 
       p {
         font-size: 1.5vw;
@@ -295,11 +293,11 @@
 
 
 .imgHover {
-  width: 60%;
+  width: 70%;
 
   transition: transform 1.4s ease-in-out;
 
   &:hover {
-    transform: scale(1.4)
+    transform: scale(1.2)
   }
 }

@@ -475,13 +475,15 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 81%;
-  gap: 2rem;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  gap: .5rem;
 }
 
 #btnAbilities button {
   height: 3rem;
-  width: 9vw;
+  width: 8.5vw;
   border: 2px solid #3d7dca;
   border-radius: 4px;
   font-size: 1vw;
@@ -543,9 +545,7 @@ body {
 }
 
 #LogoDetails {
-  position: absolute;
-  top: 0;
-  left: 2rem;
+  position: relative;
 }
 
 #LogoDetails img {
@@ -557,7 +557,7 @@ body {
   background: #FFF;
   width: 30vw;
   height: 70vh;
-  top: 15vh;
+  top: -2rem;
   padding: 3rem;
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
@@ -637,7 +637,6 @@ body {
   border-radius: 8px;
   height: 45%;
   width: 70%;
-  margin: .5rem auto;
   gap: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -848,7 +847,8 @@ body {
 }
 
 .cardDetails .textDetails #idDetails {
-  padding: 2rem;
+  height: 100%;
+  padding: 3rem;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -866,6 +866,7 @@ body {
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
           box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
   border-radius: 10px;
+  margin-right: 0;
 }
 
 .cardDetails .textDetails #idDetails p {
@@ -879,7 +880,7 @@ body {
 }
 
 .imgHover {
-  width: 60%;
+  width: 70%;
   -webkit-transition: -webkit-transform 1.4s ease-in-out;
   transition: -webkit-transform 1.4s ease-in-out;
   transition: transform 1.4s ease-in-out;
@@ -887,7 +888,7 @@ body {
 }
 
 .imgHover:hover {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=main.css.map */

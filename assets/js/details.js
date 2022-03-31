@@ -16,7 +16,7 @@ const formingCard = (response) => {
        </div>
     </div>
    <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
-   </div>
+ 
         
   <div id="btnAbilities">
       <button class="abilities">
@@ -30,7 +30,7 @@ const formingCard = (response) => {
       </button>
    </div>
   <div class="contAbilities">
-    
+  </div>
   </div>
         `
         
