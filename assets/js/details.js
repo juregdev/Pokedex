@@ -2,19 +2,30 @@ let idDetails = sessionStorage.id
 const baseUrlPokeApi ="https://pokeapi.co/api/v2/pokemon/"
 
 const formingCard = (response) => {
-  const card = `<div class="cardDetails">
-  <h1 id="pokeNameDetails"> ${response.data.forms[0].name.toUpperCase()}</h1>
-  <div class="text">
-    <div>
-      <div>
-        ${typeIdentifier(response.data.types)}
-        </div>
-        <p id="pokeID">#${response.data.id}</p>
-        </div>
-        </div>
-        <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
+  const card = `
+<div class="cardDetails">
+  <div id="titlePoke">
+     <h1 id="pokeNameDetails"> ${response.data.forms[0].name.toUpperCase()}</h1>
+   </div>
+   <div class="textDetails">
+     <div class="contType">
+       ${typeIdentifier(response.data.types)}
+       </div>
+       <div id="idDetails">
+       <p id="pokeID">#${response.data.id}</p>
+       </div>
+    </div>
+   <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
+   </div>
         
-        </div>`
+
+  <button class="abilities">
+        Habilidades
+  </button>
+  <div class="contAbilities">
+    
+  </div>
+        `
         
         document.querySelector(".conteiner").innerHTML += card
       }
@@ -47,7 +58,11 @@ document.querySelector(".conteiner").innerHTML += card
  const typeIdentifier = (data) => {
         let url ="" 
         for(i in data){
-           url = url + ` <img src="./assets/img/pokemon-types/${data[i].type.name}.png" alt="">`
+           url = url + `
+           <div class="${data[i].type.name}">
+           <img src="./assets/img/pokemon-types/${data[i].type.name}.png" id="type"  alt="">
+           </div>
+           `
   }
         return url
 }

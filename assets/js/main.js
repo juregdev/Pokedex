@@ -10,19 +10,27 @@ let pagina = ""
 
 const cardCreate = (pause) =>{
 
-  randomLoad()
+  randomLoad() 
+  
+
 
 const tempo =  setInterval(() =>{
+
+
   if (id > pause){
     clearInterval(tempo)
-    document.querySelector("#loading").classList.remove("invisibleLoading")
-    document.querySelector("#loading").classList.add("visibleLoading")
+    loading(true)
+    document.querySelector("#loading").classList.remove("visibleLoading")
+    document.querySelector("#loading").classList.add("invisibleLoading")
   
    document.querySelector("body").style.overflow = ""
-   setTimeout(() =>{   document.querySelector("#loading").style.display = "none"}, 1000)
-  }else{
-    document.querySelector("#loading").classList.add("invisibleLoading")
-    document.querySelector("#loading").classList.remove("visibleLoading")
+  setTimeout(() =>{   document.querySelector("#loading").style.display = "none"}, 1000)
+  }
+
+  else{
+   
+    document.querySelector("#loading").classList.add("visibleLoading")
+    document.querySelector("#loading").classList.remove("invisibleLoading")
     document.querySelector("body").style.overflow = "hidden"
     document.querySelector("#loading").style.display = ""
   
@@ -174,7 +182,9 @@ const randomLoad =  () =>{
 
   }
 
-const loading = ()=>{
+const loading = (breakpoint) => {
+  
+
   let i=0
   const time = setInterval(()=>{
     let carregando = [
@@ -189,9 +199,7 @@ const loading = ()=>{
       "D",
       "O"
     ]
-    
-
-    if(i > 9){
+   if(i > 9){
       i=0
       textLoad.textContent = carregando[i]
       i++
@@ -199,16 +207,26 @@ const loading = ()=>{
       textLoad.textContent += carregando[i]
       i++
     }
-  
-
   },500)
+  
+  if(breakpoint){
+  
+    clearInterval(time);
+    console.log("funfou");
+  }
+
+  else{
+    console.log("n deu")
+  }
+
+
 }
 
 
 
   if(window.location.href.indexOf("index.html")){cardCreate(15)
     randomLoad()
-    loading()
+    loading(false)
   }
   else{console.log(ErrorEvent,"Por gentileza, entre em contato com o Desenvolvedor dessa aplicação")}
   

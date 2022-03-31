@@ -1,4 +1,5 @@
 .conteiner {
+
   img {
     display: block
   }
@@ -127,58 +128,4 @@
   }
 
 
-}
-
-
-#LogoDetails {
-  position: absolute;
-  top: 0;
-  left: 2rem;
-
-  img {
-    width: 20vw
-  }
-}
-
-.cardDetails {
-
-  position: absolute;
-  background: $white;
-  width: 30%;
-  height: 60%;
-  top: 50%;
-  left: 50%;
-  padding: 3rem;
-  border-radius: 8px;
-  transform: translate(-50%, -50%);
-
-  h1#pokeNameDetails {
-    font-size: 50px;
-    text-align: center;
-  }
-
-  div {
-    margin: 2rem auto;
-    width: 100%;
-    @include flex(row);
-    gap: 4rem;
-
-    div {
-      margin: 0;
-      width: 50%;
-
-      img {
-        margin: 0;
-      }
-    }
-
-    p {
-      font-size: 40px
-    }
-
-  }
-
-  .imgHover {
-    width: 80%
-  }
 }

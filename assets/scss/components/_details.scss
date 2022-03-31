@@ -1,0 +1,307 @@
+#LogoDetails {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+
+  img {
+    width: 20vw
+  }
+}
+
+.cardDetails {
+
+  position: absolute;
+  background: $white;
+  width: 30%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  padding: 3rem;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
+
+  #titlePoke {
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.68);
+    margin-bottom: 1rem;
+
+    h1#pokeNameDetails {
+      font-size: 30px;
+      text-align: center;
+      width: 100%;
+      padding: 2rem 0px;
+      border-radius: 8px;
+    }
+  }
+
+  .textDetails {
+    margin: 0;
+    width: 100%;
+    height: 10rem;
+    @include flex(row);
+    justify-content: space-between;
+    gap: 1rem;
+
+    .contType {
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      @include flex(column);
+
+      div {
+        margin-left: 0;
+        padding: .5rem;
+        border-radius: 8px;
+        height: 45%;
+        width: 70%;
+        margin: .5rem auto;
+        gap: 1rem;
+        @include flex(row);
+
+        img {
+          display: block;
+          height: 90%;
+          margin-left: 0;
+        }
+      }
+
+      .grass {
+        background-color: $grass;
+
+        &::after {
+          content: "GRASS";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .poison {
+        background-color: $poison;
+
+        &::after {
+          content: "POISON";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .electric {
+        background-color: $eletric;
+
+        &::after {
+          content: "ELETRIC";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .water {
+        background-color: $water;
+
+        &::after {
+          content: "WATER";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .fire {
+        background-color: $fire;
+
+        &::after {
+          content: "FIRE";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .bug {
+        background-color: $bug;
+
+        &::after {
+          content: "BUG";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .flying {
+        background-color: $flying;
+
+        &::after {
+          content: "FLYING";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .normal {
+        background-color: $normal;
+
+        &::after {
+          content: "NORMAL";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .ground {
+        background-color: $ground;
+
+        &::after {
+          content: "GROUND";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .fairy {
+        background-color: $fairy;
+
+        &::after {
+          content: "FAIRY";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .dark {
+        background-color: $dark;
+
+        &::after {
+          content: "DARK";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .ghost {
+        background-color: $ghost;
+
+        &::after {
+          content: "GHOST";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .fighting {
+        background-color: $fighting;
+
+        &::after {
+          content: "FIGHTING";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .psychic {
+        background-color: $psychic;
+
+        &::after {
+          content: "PSYCHIC";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .rock {
+        background-color: $rock;
+
+        &::after {
+          content: "ROCK";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .ice {
+        background-color: $ice;
+
+        &::after {
+          content: "ICE";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      .steel {
+        background-color: $steel;
+
+        &::after {
+          content: "STEEL";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+
+
+    }
+
+    #idDetails {
+      height: 8rem;
+
+      padding: 1rem;
+      text-align: center;
+      @include flex(column);
+      box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
+      border-radius: 10px;
+
+      p {
+        font-size: 1.5vw;
+        font-weight: bold;
+        display: block;
+      }
+    }
+
+    /* div {
+      border: 1px solid goldenrod;
+      background-color: goldenrod;
+      gap: 0;
+      border-radius: 8px;
+      height: 5rem;
+      width: 25%;
+      gap: 1rem;
+      @include flex(row);
+      padding: 0 1rem;
+*/
+
+
+    img {
+      margin: 0;
+    }
+  }
+}
+
+
+
+
+
+
+.imgHover {
+  width: 60%;
+
+  transition: transform 1.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.4)
+  }
+}

@@ -212,70 +212,6 @@ body {
   margin: 0;
 }
 
-#LogoDetails {
-  position: absolute;
-  top: 0;
-  left: 2rem;
-}
-
-#LogoDetails img {
-  width: 20vw;
-}
-
-.cardDetails {
-  position: absolute;
-  background: #FFF;
-  width: 30%;
-  height: 60%;
-  top: 50%;
-  left: 50%;
-  padding: 3rem;
-  border-radius: 8px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.cardDetails h1#pokeNameDetails {
-  font-size: 50px;
-  text-align: center;
-}
-
-.cardDetails div {
-  margin: 2rem auto;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 4rem;
-}
-
-.cardDetails div div {
-  margin: 0;
-  width: 50%;
-}
-
-.cardDetails div div img {
-  margin: 0;
-}
-
-.cardDetails div p {
-  font-size: 40px;
-}
-
-.cardDetails .imgHover {
-  width: 80%;
-}
-
 @-webkit-keyframes search {
   0% {
     -webkit-transform: rotate(0deg);
@@ -504,6 +440,26 @@ body {
   color: #FFF;
 }
 
+.abilities {
+  position: absolute;
+  top: 81%;
+  height: 3rem;
+  width: 9vw;
+  border: 2px solid #3d7dca;
+  border-radius: 4px;
+  font-size: 1vw;
+  font-weight: bold;
+  color: #3d7dca;
+  background: transparent;
+  -webkit-transition: color .5s ease-in-out;
+  transition: color .5s ease-in-out;
+}
+
+.abilities:hover {
+  background: #3d7dca;
+  color: white;
+}
+
 #loading {
   position: fixed;
   display: -webkit-box;
@@ -539,13 +495,366 @@ body {
           animation: pokemon 3s infinite;
 }
 
-.visibleLoading {
+.invisibleLoading {
   -webkit-animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-.invisibleLoading {
+.visibleLoading {
   -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#LogoDetails {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+}
+
+#LogoDetails img {
+  width: 20vw;
+}
+
+.cardDetails {
+  position: absolute;
+  background: #FFF;
+  width: 30%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  padding: 3rem;
+  border-radius: 8px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
+          box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
+}
+
+.cardDetails #titlePoke {
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.68);
+          box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.68);
+  margin-bottom: 1rem;
+}
+
+.cardDetails #titlePoke h1#pokeNameDetails {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  padding: 2rem 0px;
+  border-radius: 8px;
+}
+
+.cardDetails .textDetails {
+  margin: 0;
+  width: 100%;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  /* div {
+      border: 1px solid goldenrod;
+      background-color: goldenrod;
+      gap: 0;
+      border-radius: 8px;
+      height: 5rem;
+      width: 25%;
+      gap: 1rem;
+      @include flex(row);
+      padding: 0 1rem;
+*/
+}
+
+.cardDetails .textDetails .contType {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardDetails .textDetails .contType div {
+  margin-left: 0;
+  padding: .5rem;
+  border-radius: 8px;
+  height: 45%;
+  width: 70%;
+  margin: .5rem auto;
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardDetails .textDetails .contType div img {
+  display: block;
+  height: 90%;
+  margin-left: 0;
+}
+
+.cardDetails .textDetails .contType .grass {
+  background-color: #40a749;
+}
+
+.cardDetails .textDetails .contType .grass::after {
+  content: "GRASS";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .poison {
+  background-color: #ff00ea;
+}
+
+.cardDetails .textDetails .contType .poison::after {
+  content: "POISON";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .electric {
+  background-color: goldenrod;
+}
+
+.cardDetails .textDetails .contType .electric::after {
+  content: "ELETRIC";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .water {
+  background-color: #4073a7;
+}
+
+.cardDetails .textDetails .contType .water::after {
+  content: "WATER";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .fire {
+  background-color: #df8600;
+}
+
+.cardDetails .textDetails .contType .fire::after {
+  content: "FIRE";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .bug {
+  background-color: #8ddd94;
+}
+
+.cardDetails .textDetails .contType .bug::after {
+  content: "BUG";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .flying {
+  background-color: #275296;
+}
+
+.cardDetails .textDetails .contType .flying::after {
+  content: "FLYING";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .normal {
+  background-color: gray;
+}
+
+.cardDetails .textDetails .contType .normal::after {
+  content: "NORMAL";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .ground {
+  background-color: #71522b;
+}
+
+.cardDetails .textDetails .contType .ground::after {
+  content: "GROUND";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .fairy {
+  background-color: pink;
+}
+
+.cardDetails .textDetails .contType .fairy::after {
+  content: "FAIRY";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .dark {
+  background-color: #190722;
+}
+
+.cardDetails .textDetails .contType .dark::after {
+  content: "DARK";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .ghost {
+  background-color: #190722;
+}
+
+.cardDetails .textDetails .contType .ghost::after {
+  content: "GHOST";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .fighting {
+  background-color: #d14141;
+}
+
+.cardDetails .textDetails .contType .fighting::after {
+  content: "FIGHTING";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .psychic {
+  background-color: #9f4d5b;
+}
+
+.cardDetails .textDetails .contType .psychic::after {
+  content: "PSYCHIC";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .rock {
+  background-color: #7a6910;
+}
+
+.cardDetails .textDetails .contType .rock::after {
+  content: "ROCK";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .ice {
+  background-color: lightblue;
+}
+
+.cardDetails .textDetails .contType .ice::after {
+  content: "ICE";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails .contType .steel {
+  background-color: LightGray;
+}
+
+.cardDetails .textDetails .contType .steel::after {
+  content: "STEEL";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.cardDetails .textDetails #idDetails {
+  height: 8rem;
+  padding: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
+          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
+  border-radius: 10px;
+}
+
+.cardDetails .textDetails #idDetails p {
+  font-size: 1.5vw;
+  font-weight: bold;
+  display: block;
+}
+
+.cardDetails .textDetails img {
+  margin: 0;
+}
+
+.imgHover {
+  width: 60%;
+  -webkit-transition: -webkit-transform 1.4s ease-in-out;
+  transition: -webkit-transform 1.4s ease-in-out;
+  transition: transform 1.4s ease-in-out;
+  transition: transform 1.4s ease-in-out, -webkit-transform 1.4s ease-in-out;
+}
+
+.imgHover:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 /*# sourceMappingURL=main.css.map */
