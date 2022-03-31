@@ -67,7 +67,9 @@ const typeIdentifier = (data) => {
   let url ="" 
  
   for(i in data){
-   url = url + ` <img src="./assets/img/pokemon-types/${data[i].type.name}.png" alt="">`
+    url = url + ` <img src="./assets/img/pokemon-types/${data[i].type.name}.png" alt="">
+    `
+    
   }
 
   return url
