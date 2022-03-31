@@ -18,10 +18,17 @@ const formingCard = (response) => {
    <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
    </div>
         
-
-  <button class="abilities">
-        Habilidades
-  </button>
+  <div id="btnAbilities">
+      <button class="abilities">
+            Abilities
+      </button>
+      <button class="location">
+            Location
+      </button>
+      <button class="games">
+            Games
+      </button>
+   </div>
   <div class="contAbilities">
     
   </div>

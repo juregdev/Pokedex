@@ -64,12 +64,15 @@
 
     .card {
       text-align: center;
-      width: 18%;
-      height: 15%;
+      width: 12%;
+      height: 10%;
       border-radius: 8px;
       background: $white;
       padding: 2rem;
       font-family: verdana, "sans-serif";
+      box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
+      transition: transform 1.5s ease-in-out;
+
 
       a {
         text-decoration: none;
@@ -83,11 +86,22 @@
 
       .imgHover {
         transition: transform 1.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.5);
+
+
+        }
       }
 
-      &:hover .imgHover {
-        transform: scale(1.1)
+
+
+      &:hover {
+        position: relative;
+        z-index: 1;
+        transform: scale(1.5)
       }
+
 
       h1 {
         margin-bottom: 1rem;
@@ -105,9 +119,11 @@
         div {
           margin: 0;
           @include flex(row);
+          gap: 1rem;
 
           p {
-            font-size: 1.5vw;
+            font-weight: bold;
+            font-size: 1vw;
             margin-right: 2rem;
           }
 
@@ -115,8 +131,13 @@
 
 
           img {
-            width: 10%;
+            width: 15%;
             margin: 0;
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
+            border-radius: 100%;
+            padding: .3rem;
+            position: relative;
+
           }
 
 

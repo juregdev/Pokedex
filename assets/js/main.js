@@ -46,7 +46,7 @@ const tempo =  setInterval(() =>{
  
 
   const more = () =>{
-      let pause = id + 14;
+      let pause = id + 13;
       cardCreate(pause)
   }
 
@@ -117,7 +117,7 @@ const urlImg = (dataUrl) =>{
 
 const entrar = () =>{
   sessionStorage.setItem("id", pokeSearch.value)
-  window.location.href = "/details.html"
+  window.location.href = "details.html"
   
 }
 
@@ -224,7 +224,7 @@ const loading = (breakpoint) => {
 
 
 
-  if(window.location.href.indexOf("index.html")){cardCreate(15)
+  if(window.location.href.indexOf("index.html")){cardCreate(14)
     randomLoad()
     loading(false)
   }
