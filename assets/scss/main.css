@@ -483,7 +483,7 @@ body {
 
 #btnAbilities button {
   height: 3rem;
-  width: 8.5vw;
+  width: 20%;
   border: 2px solid #3d7dca;
   border-radius: 4px;
   font-size: 1vw;
@@ -492,6 +492,7 @@ body {
   background: transparent;
   -webkit-transition: color .5s ease-in-out;
   transition: color .5s ease-in-out;
+  background: #FFF;
 }
 
 #btnAbilities button:hover {

@@ -43,7 +43,7 @@
   button {
 
     height: 3rem;
-    width: 8.5vw;
+    width: 20%;
     border: 2px solid $blue;
     border-radius: 4px;
     font-size: 1vw;
@@ -51,6 +51,7 @@
     color: $blue;
     background: transparent;
     transition: color .5s ease-in-out;
+    background: $white;
 
 
     &:hover {

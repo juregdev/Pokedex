@@ -212,11 +212,11 @@ const loading = (breakpoint) => {
   if(breakpoint){
   
     clearInterval(time);
-    console.log("funfou");
+   
   }
 
   else{
-    console.log("n deu")
+   
   }
 
 

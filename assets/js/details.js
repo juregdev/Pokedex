@@ -28,9 +28,13 @@ const formingCard = (response) => {
       <button class="games">
             Games
       </button>
+      <button class="evolution">
+      Evolution
+</button>
+   </div>
    </div>
   <div class="contAbilities">
-  </div>
+  
   </div>
         `
         
