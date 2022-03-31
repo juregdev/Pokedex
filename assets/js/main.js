@@ -67,7 +67,7 @@ const typeIdentifier = (data) => {
   let url ="" 
  
   for(i in data){
-   url = url + ` <img src="./assets/img/pokemon-types/${data[i].type.name}.png" alt="">`
+   url = url + ` <img src="/assets/img/pokemon-types/${data[i].type.name}.png" alt="">`
   }
 
   return url
@@ -107,7 +107,7 @@ const urlImg = (dataUrl) =>{
 
 const entrar = () =>{
   sessionStorage.setItem("id", pokeSearch.value)
-  window.location.href = "/details.html"
+  window.location.href = "details.html"
   
 }
 
