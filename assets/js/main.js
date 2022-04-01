@@ -1,19 +1,15 @@
-let input = document.querySelector('#pokeSearch');
-let search = '';
-
-const baseUrlPokeApi ="https://pokeapi.co/api/v2/pokemon/"
+let input = document.querySelector('#pokeSearch'); // Variavel que guarda posição da pesquisa
 
 
-let id = 1;
-let pagina = ""
+const baseUrlPokeApi ="https://pokeapi.co/api/v2/pokemon/" //Url base para fazer a função dos pokemons
 
 
+let id = 1; //Id inicial para buscar 
+
+
+// Função que automatiza a criação de cartoes com parametro para pausar
 const cardCreate = (pause) =>{
-
-  randomLoad() 
-  
-
-
+randomLoad() 
 const tempo =  setInterval(() =>{
 
 
@@ -41,69 +37,42 @@ const tempo =  setInterval(() =>{
     id = id + 1
 }}, 200)}
 
-
-
- 
-
-  const more = () =>{
+//Função do botao de Ver mais 
+const more = () =>{
       let pause = id + 13;
       cardCreate(pause)
   }
 
+//Criador do card 
 const formingCard = (response) => {
-  const card = `<div class="card">
-  <a href="./details.html" onclick="idStorage(this)" id="${response.data.forms[0].name.toUpperCase()}" title="Clique e veja mais detalhes do  ${response.data.forms[0].name}">
-  <h1 id="pokeName"> ${response.data.forms[0].name.toUpperCase()}</h1>
-  </a>
-  <div class="text">
-    <div>
-      
-        ${typeIdentifier(response.data.types)}
-      
-      <p id="pokeID">#${response.data.id}</p>
-    </div>
-  </div>
-  <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
-  
+  const card = `
+  <div class="card">
+      <a href="./details.html" onclick="idStorage(this)" id="${response.data.forms[0].name.toUpperCase()}" title="Clique e veja mais detalhes do  ${response.data.forms[0].name}">
+          <h1 id="pokeName"> ${response.data.forms[0].name.toUpperCase()}</h1>
+      </a>
+      <div class="text">
+          <div>
+             ${typeIdentifier(response.data.types)}
+             <p id="pokeID">#${response.data.id}</p>
+          </div>
+      </div>
+          <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
   </div>`
 
 document.querySelector(".content").innerHTML += card
 }
 
-
+// Função que identifica o Tipo do Pokemon
 const typeIdentifier = (data) => {
   let url ="" 
- 
   for(i in data){
-    url = url + ` <img src="./assets/img/pokemon-types/${data[i].type.name}.png" alt="">
-    `
-    
+    url = url + ` 
+    <img src="./assets/img/pokemon-types/${data[i].type.name}.png" alt="">` 
   }
-
   return url
 }
 
-const pokeRecord =( ) =>{
-  search = input.value;
- 
-  getPokemon(baseUrlPokeApi)
-}
-
-const getPokemon = (url) =>{
-  axios.get(`${url}${search.toLowerCase()}`).then(response => {
-    const data = response.data.sprites.other;
-    const officialImg = urlImg(data)
-console.log(response.data.types[0].type.name)
-
-    pokeName.textContent = response.data.forms[0].name.toUpperCase()
-    pokeID.textContent = `#${response.data.id}`
-    pokeImg.src = officialImg; 
-  
-  }).catch(error =>{
-
-  })
-}
-
+//Função para resolver problema de "-" no e acessar o item com o nome official-artwork
 const urlImg = (dataUrl) =>{
   for(data in dataUrl){
     if (data == 'official-artwork'){
@@ -111,28 +80,29 @@ const urlImg = (dataUrl) =>{
          return dataUrl[sprite].front_default;
     } 
   }
-} //Função para pegar a foto oficial }
+} 
 
 
-
+//Função da pesquisa que envia o sessionStorage
 const entrar = () =>{
   sessionStorage.setItem("id", pokeSearch.value)
-  window.location.href = "details.html"
-  
+  window.location.href = "details.html" 
 }
 
+//Funnção que envia o sessionStorage com o id do card que foi clicado
 const idStorage = (element) =>{
       sessionStorage.setItem("id", element.id.toLowerCase())
 }
 
 
-
+//funcção usada na tela de carregamento, fazendo um ramdom para imagens
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+//Função que seleciona a foto da telad de Loading
 const randomLoad =  () =>{
   let ramdom = getRandomIntInclusive(1,9);
   let element = document.querySelector("#imgLoad")
@@ -182,9 +152,8 @@ const randomLoad =  () =>{
 
   }
 
+//Cria as palavra carregando
 const loading = (breakpoint) => {
-  
-
   let i=0
   const time = setInterval(()=>{
     let carregando = [
@@ -223,11 +192,11 @@ const loading = (breakpoint) => {
 }
 
 
-
-  if(window.location.href.indexOf("index.html")){cardCreate(14)
+//Verificação se a pagina esta correta
+if(window.location.href.indexOf("index.html")){cardCreate(14)
     randomLoad()
     loading(false)
   }
-  else{console.log(ErrorEvent,"Por gentileza, entre em contato com o Desenvolvedor dessa aplicação")}
+else{console.log(ErrorEvent,"Por gentileza, entre em contato com o Desenvolvedor dessa aplicação")}
   
 

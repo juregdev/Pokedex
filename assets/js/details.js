@@ -1,4 +1,4 @@
-let idDetails = sessionStorage.id // De onde pegamos a informação de qual pokemon buscar, pegamos da sessão para não guardar informações desnecessarias no local do usuario 
+let idDetails = sessionStorage.id // De onde pegamos a informação de qual pokemon buscar, pegamos da sessão para não guardar informações desnecessarias no localStorage do usuario 
 
 const baseUrlPokeApi ="https://pokeapi.co/api/v2/pokemon/" // URL Base para busca de pokemons
 
