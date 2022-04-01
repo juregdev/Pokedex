@@ -59,6 +59,7 @@
     @include flex(row);
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 0 5rem;
 
 
 
@@ -71,7 +72,7 @@
       padding: 2rem;
       font-family: verdana, "sans-serif";
       box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
-      transition: transform 1.5s ease-in-out;
+      transition: transform 1.5s .6s ease-in-out;
 
 
       a {
@@ -85,12 +86,10 @@
       }
 
       .imgHover {
-        transition: transform 1.5s ease-in-out;
+        transition: transform 1.5s .3s ease-in-out;
 
         &:hover {
           transform: scale(1.5);
-
-
         }
       }
 
