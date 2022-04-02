@@ -18,13 +18,14 @@ const formingCard = (response) => {
                     </div>
                   </div>
                   <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
-                                                
+                          
+                  <div class="informations">
+                          ${infoSearch(response.data)}
+                  </div>
+
                   <div id="btnAbilities">
                     <button class="abilities">
                       Abilities
-                    </button>
-                    <button class="location">
-                      Location
                     </button>
                     <button class="games">
                       Games
@@ -39,6 +40,27 @@ const formingCard = (response) => {
                 </div>
                             `     
     document.querySelector(".conteiner").innerHTML += card
+}
+
+
+const infoSearch = (data) => {
+
+  let info = ""
+
+  for(i in data.stats){
+      console.log(data.stats[i].base_stat)
+      info += `
+      <div id="${data.stats[i].stat.name}">
+        <h2>${data.stats[i].stat.name.toUpperCase()}</h2>
+        <div>
+          <p> ${data.stats[i].base_stat}</p>
+        </div>
+      </div>
+      `
+
+  }
+
+  return info
 }
 
 //Função Formadora do card de Erro

@@ -11,7 +11,6 @@
   position: relative;
   background: $white;
   width: 30vw;
-  height: 70vh;
   top: -2rem;
   padding: 3rem;
   border-radius: 8px;
@@ -247,6 +246,16 @@
         }
       }
 
+      .dragon {
+        background-color: $dragon;
+
+        &::after {
+          content: "DRAGON";
+          font-size: 16px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
 
 
     }
@@ -268,36 +277,84 @@
       }
     }
 
-    /* div {
-      border: 1px solid goldenrod;
-      background-color: goldenrod;
-      gap: 0;
-      border-radius: 8px;
-      height: 5rem;
-      width: 25%;
-      gap: 1rem;
-      @include flex(row);
-      padding: 0 1rem;
-*/
-
-
     img {
       margin: 0;
     }
+
+
+
   }
-}
+
+  .imgHover {
+    width: 100%;
+
+    transition: transform 1.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2)
+    }
+  }
+
+  .informations {
+    position: absolute;
+    left: -10.5rem;
+    height: 100%;
+    top: 0;
+
+    @include flex(column);
+
+    /*
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    margin-bottom: 4rem;
+    height: 20%;
+    text-align: center;*/
+
+    div {
+
+      @include flex(column);
+      background: $white;
+      height: 1rem;
+      width: 60%;
+      padding: 2rem;
+      transform: rotate(90deg);
+      text-align: center;
+      border-radius: 0 0 5px 5px;
+      position: relative;
+
+      h2 {
+        font-size: 15px;
+        margin: 0;
+      }
+
+      div {
+        position: absolute;
+        bottom: -0%;
+        opacity: 0;
+        transform: rotate(-90deg);
+        z-index: 1;
+        margin: 0;
+        border-radius: 5px;
+        transition: all .7s ease-in-out;
 
 
 
 
+        p {
+
+          font-size: 18px;
+          font-weight: bold;
 
 
-.imgHover {
-  width: 70%;
+        }
+      }
 
-  transition: transform 1.4s ease-in-out;
+      &:hover div {
+        @include flex(rows);
+        bottom: -140%;
+        opacity: 1;
+      }
+    }
 
-  &:hover {
-    transform: scale(1.2)
   }
 }

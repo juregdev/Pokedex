@@ -226,10 +226,7 @@ body {
 .conteiner .content .card .text div img {
   width: 15%;
   margin: 0;
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
-          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.68);
   border-radius: 100%;
-  padding: .3rem;
   position: relative;
 }
 
@@ -558,7 +555,6 @@ body {
   position: relative;
   background: #FFF;
   width: 30vw;
-  height: 70vh;
   top: -2rem;
   padding: 3rem;
   border-radius: 8px;
@@ -601,17 +597,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 1rem;
-  /* div {
-      border: 1px solid goldenrod;
-      background-color: goldenrod;
-      gap: 0;
-      border-radius: 8px;
-      height: 5rem;
-      width: 25%;
-      gap: 1rem;
-      @include flex(row);
-      padding: 0 1rem;
-*/
 }
 
 .cardDetails .textDetails .contType {
@@ -772,7 +757,7 @@ body {
 }
 
 .cardDetails .textDetails .contType .dark {
-  background-color: #190722;
+  background-color: #0c0c0c;
 }
 
 .cardDetails .textDetails .contType .dark::after {
@@ -848,6 +833,17 @@ body {
   color: #FFF;
 }
 
+.cardDetails .textDetails .contType .dragon {
+  background-color: #082ce1;
+}
+
+.cardDetails .textDetails .contType .dragon::after {
+  content: "DRAGON";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
 .cardDetails .textDetails #idDetails {
   height: 100%;
   padding: 3rem;
@@ -881,16 +877,108 @@ body {
   margin: 0;
 }
 
-.imgHover {
-  width: 70%;
+.cardDetails .imgHover {
+  width: 100%;
   -webkit-transition: -webkit-transform 1.4s ease-in-out;
   transition: -webkit-transform 1.4s ease-in-out;
   transition: transform 1.4s ease-in-out;
   transition: transform 1.4s ease-in-out, -webkit-transform 1.4s ease-in-out;
 }
 
-.imgHover:hover {
+.cardDetails .imgHover:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.cardDetails .informations {
+  position: absolute;
+  left: -10.5rem;
+  height: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    margin-bottom: 4rem;
+    height: 20%;
+    text-align: center;*/
+}
+
+.cardDetails .informations div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #FFF;
+  height: 1rem;
+  width: 60%;
+  padding: 2rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  position: relative;
+}
+
+.cardDetails .informations div h2 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.cardDetails .informations div div {
+  position: absolute;
+  bottom: -0%;
+  opacity: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  z-index: 1;
+  margin: 0;
+  border-radius: 5px;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
+}
+
+.cardDetails .informations div div p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cardDetails .informations div:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: rows;
+          flex-direction: rows;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: -140%;
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
