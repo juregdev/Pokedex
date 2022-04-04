@@ -12,8 +12,9 @@ const cardCreate = (pause) =>{
   randomLoad() 
   const tempo =  setInterval(() =>{
     if (id > pause) {
+      console.log("Caindo verdadeiro")
       clearInterval(tempo)
-      loading(true)
+      clearInterval(timer)
       document.querySelector("#loading").classList.remove("visibleLoading")
       document.querySelector("#loading").classList.add("invisibleLoading")   
       document.querySelector("body").style.overflow = ""
@@ -23,13 +24,24 @@ const cardCreate = (pause) =>{
       document.querySelector("#loading").classList.remove("invisibleLoading")
       document.querySelector("body").style.overflow = "hidden"
       document.querySelector("#loading").style.display = ""
-
       axios.get(`${baseUrlPokeApi}${id}`).then(response => {
         formingCard(response);
       })
-      id = id + 1
+      id++
     }
   }, 200)
+
+  let i = 0
+  document.querySelector("#textLoad").textContent = ''
+  const timer = setInterval(() =>{    
+    switch (i){
+      case 10: 
+        i=0
+        document.querySelector("#textLoad").textContent = ''
+    }
+    testLoanding(i)
+    i++
+  }, 500)
 }
 
 //Função do botao de Ver mais 
@@ -103,83 +115,73 @@ const randomLoad = () => {
   switch (ramdom) {
     case 1:
       element.src = './assets/img/loading/pokebola.png';
+      element.classList.remove("pokemon")
       element.classList.add("pokebola")
       break;
 
     case 2:
       element.src = './assets/img/loading/bullbasaur.png';
       element.classList.add("pokemon")
+      element.classList.remove("pokebola")
       break;
 
     case 3:
       element.src = './assets/img/loading/charmander.png';
       element.classList.add("pokemon")
+      element.classList.remove("pokebola")
       break;
        
     case 4:
       element.src = './assets/img/loading/eevee.png';
       element.classList.add("pokemon")
+      element.classList.remove("pokebola")
       break;
 
     case 5:
       element.src = './assets/img/loading/jigglypuff.png';
       element.classList.add("pokemon")
+      element.classList.remove("pokebola")
       break;
 
     case 6:
       element.src = './assets/img/loading/meowth.png';
       element.classList.add("pokemon")
+      element.classList.remove("pokebola")
       break;
 
     case 7:
       element.src = './assets/img/loading/pikachu.png';
       element.classList.add("pokemon")
+      element.classList.remove("pokebola")
       break;
 
     case 8:
       element.src = './assets/img/loading/squirtle.png';
       element.classList.add("pokemon")
+      element.classList.remove("pokebola")
       break;
 
     case 9:
       element.src = './assets/img/loading/psyduck.png';
       element.classList.add("pokemon")
+      element.classList.remove("pokebola")
       break;
   
     default: console.log("erro")
   }
 }
 
-//Cria as palavra carregando
-const loading = (breakpoint) => {
-  let i=0
-  let carregando = ["C","A","R","R","E","G","A","N","D","O"]
-  var time = setInterval(()=>{
-    if (breakpoint) {
-     console.log("Funciona")
-      return
-    } else if (i > 9) {
-      console.log("continuou")
-      i=0
-      textLoad.textContent = carregando[i]
-      i++
-    } else {
-      textLoad.textContent += carregando[i]
-      i++
-    }
-  },500)
-  console.log("terminou")
-}
-
-const breakpoint = (time) => {
-  clearInterval(time);
+const testLoanding = (i) =>{
+  const carregando = ['C', 'A', 'R', 'R', 'E', 'G', 'A', 'N', 'D', 'O']
+    document.querySelector("#textLoad").textContent += carregando[i]
+    console.log("funfa")
+  
 }
 
 //Verificação se a pagina esta correta
 if (window.location.href.indexOf("index.html")) {
   cardCreate(14)
   randomLoad()
-  loading()
 } else {
   console.log(ErrorEvent,"Por gentileza, entre em contato com o Desenvolvedor dessa aplicação")
 }

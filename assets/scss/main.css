@@ -396,6 +396,110 @@ body {
   }
 }
 
+@-webkit-keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
 .error {
   position: absolute;
   top: 50%;
@@ -544,18 +648,23 @@ body {
 }
 
 #LogoDetails {
-  position: relative;
+  position: absolute;
+  top: 47%;
+  right: 28%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 #LogoDetails img {
-  width: 20vw;
+  width: 10vw;
 }
 
 .cardDetails {
-  position: relative;
+  position: absolute;
+  z-index: 1;
   background: #FFF;
   width: 30vw;
-  top: -2rem;
+  top: 13%;
   padding: 3rem;
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
@@ -878,7 +987,7 @@ body {
 }
 
 .cardDetails .imgHover {
-  width: 100%;
+  width: 90%;
   -webkit-transition: -webkit-transform 1.4s ease-in-out;
   transition: -webkit-transform 1.4s ease-in-out;
   transition: transform 1.4s ease-in-out;
@@ -890,95 +999,258 @@ body {
           transform: scale(1.2);
 }
 
-.cardDetails .informations {
-  position: absolute;
-  left: -10.5rem;
-  height: 100%;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /*
-    flex-wrap: wrap;
-    row-gap: 1rem;
-    margin-bottom: 4rem;
-    height: 20%;
-    text-align: center;*/
-}
-
-.cardDetails .informations div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.informations {
+  height: 40%;
+  width: 10%;
   background: #FFF;
-  height: 1rem;
-  width: 60%;
-  padding: 2rem;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  text-align: center;
-  border-radius: 0 0 5px 5px;
-  position: relative;
-}
-
-.cardDetails .informations div h2 {
-  font-size: 15px;
-  margin: 0;
-}
-
-.cardDetails .informations div div {
   position: absolute;
-  bottom: -0%;
-  opacity: 0;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  z-index: 1;
-  margin: 0;
-  border-radius: 5px;
-  -webkit-transition: all .7s ease-in-out;
-  transition: all .7s ease-in-out;
+  top: 13%;
+  left: 35%;
+  border-radius: 10px;
+  z-index: 0;
+  padding: 1rem;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.cardDetails .informations div div p {
-  font-size: 18px;
+.informations div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5rem;
+  text-align: center;
+}
+
+.informations div h2 {
+  font-size: 15px;
+}
+
+.informations p {
+  font-size: 12px;
   font-weight: bold;
 }
 
-.cardDetails .informations div:hover div {
+#moreInformations {
+  position: absolute;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: rows;
-          flex-direction: rows;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  bottom: -140%;
-  opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  top: 13%;
+  left: 32.9%;
+  background: #FFF;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10px;
+  z-index: 0;
+  cursor: pointer;
+}
+
+/*
+.arrows {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  width: 3vw;
+  height: 3vh;
+  @include flex(row);
+  gap: 0.5rem;
+
+
+
+  .arrowright {
+    width: 100%;
+
+    transition: transform .8s .2s ease-in-out;
+
+    &:hover {
+      transform: translateX(.5rem)
+    }
+  }
+
+  .arrowLeft {
+    width: 100%;
+    transition: transform .8s .2s ease-in-out;
+
+    &:hover {
+      transform: translateX(-.5rem)
+    }
+  }
+
+}*/
+.arrowLeft {
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.arrowLeft:hover {
+  background-color: goldenrod;
+}
+
+.arrowLeft:hover div {
+  background-color: #FFDE00;
+  left: -2rem;
+}
+
+.arrowLeft .line1 {
+  width: 10%;
+  height: 10%;
+  background-color: goldenrod;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  position: relative;
+  top: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.arrowLeft .line2 {
+  margin-top: 0;
+  width: 10%;
+  height: 10%;
+  background-color: goldenrod;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  position: relative;
+  top: -1rem;
+  border-radius: 10px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.arrowright {
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.arrowright .line1 {
+  width: 10%;
+  height: 10%;
+  background-color: goldenrod;
+  -webkit-transform: rotate(160deg);
+          transform: rotate(160deg);
+  position: relative;
+  top: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.arrowright .line2 {
+  margin-top: 0;
+  width: 10%;
+  height: 10%;
+  background-color: goldenrod;
+  -webkit-transform: rotate(-160deg);
+          transform: rotate(-160deg);
+  position: relative;
+  top: -1rem;
+  border-radius: 10px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.arrowright:hover {
+  background-color: goldenrod;
+}
+
+.arrowright:hover div {
+  background-color: #FFDE00;
+  right: -2rem;
+}
+
+.transitionOut {
+  -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.transitionIn {
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.transitionInRight {
+  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.transitionOutRight {
+  -webkit-animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 /*# sourceMappingURL=main.css.map */
