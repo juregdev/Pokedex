@@ -7,11 +7,11 @@
 
 html,
 body {
-  width: 100vw;
   margin: 0;
 }
 
 body {
+  position: relative;
   font-family: verdana, "sans-serif";
   background: #FFDE00;
   display: -webkit-box;
@@ -28,7 +28,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   overflow-x: hidden;
-  padding-bottom: 1rem;
 }
 
 #pokelogo {
@@ -56,10 +55,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.conteiner img {
-  display: block;
 }
 
 .conteiner .search {
@@ -621,8 +616,8 @@ body {
 
 @-webkit-keyframes slide-in-right {
   0% {
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
     opacity: 0;
   }
   100% {
@@ -634,8 +629,8 @@ body {
 
 @keyframes slide-in-right {
   0% {
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
     opacity: 0;
   }
   100% {
@@ -789,6 +784,13 @@ body {
   background: #FFF;
 }
 
+@media screen and (max-width: 1400px) {
+  #btnAbilities button {
+    width: 25%;
+    font-size: 1.5vw;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #btnAbilities button {
     width: 25%;
@@ -894,8 +896,33 @@ body {
           animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.conteinerDetails {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .conteinerDetails {
+    overflow-x: hidden;
+  }
+}
+
 .cardDetails {
-  position: absolute;
+  position: relative;
   z-index: 1;
   background: #FFF;
   width: 30vw;
@@ -1019,6 +1046,18 @@ body {
           justify-content: center;
 }
 
+@media screen and (max-width: 1400px) {
+  .cardDetails .textDetails .contType div {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cardDetails .textDetails .contType div {
+    gap: .6rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .cardDetails .textDetails .contType div {
     width: 100%;
@@ -1036,6 +1075,18 @@ body {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .cardDetails .textDetails .contType div:after {
+    font-size: 2vw !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardDetails .textDetails .contType div:after {
+    font-size: 3vw !important;
+  }
+}
+
 @media screen and (max-width: 300px) {
   .cardDetails .textDetails .contType div:after {
     font-size: 4vw !important;
@@ -1046,6 +1097,12 @@ body {
   display: block;
   height: 90%;
   margin-left: 0;
+}
+
+@media screen and (max-width: gray) {
+  .cardDetails .textDetails .contType div img {
+    height: 70%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1315,7 +1372,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .cardDetails .imgHover {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -1360,7 +1417,7 @@ body {
 @media screen and (max-width: 600px) {
   .informations {
     z-index: 1;
-    top: 85%;
+    top: 83%;
     left: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1546,8 +1603,15 @@ body {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (max-width: 1000px) {
+  .arrowLeft .line1 {
+    top: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .arrowLeft .line1 {
+    height: 5%;
     top: 0.3rem;
   }
 }
@@ -1566,9 +1630,16 @@ body {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (max-width: 1000px) {
+  .arrowLeft .line2 {
+    top: -0.5rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .arrowLeft .line2 {
-    top: -0.3rem;
+    top: -0.2rem;
+    height: 5%;
   }
 }
 
@@ -1638,9 +1709,16 @@ body {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (max-width: 1000px) {
+  .arrowright .line1 {
+    top: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .arrowright .line1 {
-    top: 0.3rem;
+    top: 0.2rem;
+    height: 5%;
   }
 }
 
@@ -1658,9 +1736,16 @@ body {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (max-width: 1000px) {
+  .arrowright .line2 {
+    top: -0.5rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .arrowright .line2 {
-    top: -0.3rem;
+    top: -0.2rem;
+    height: 5%;
   }
 }
 

@@ -8,11 +8,6 @@
 
 .conteiner {
   width: 100%;
-
-  img {
-    display: block
-  }
-
   @include flex(column);
 
 

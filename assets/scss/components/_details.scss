@@ -1,5 +1,17 @@
+.conteinerDetails {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  @include flex(column);
+
+  @media screen and (max-width:$mobile) {
+    overflow-x: hidden;
+
+  }
+}
+
 .cardDetails {
-  position: absolute;
+  position: relative;
   z-index: 1;
   background: $white;
   width: 30vw;
@@ -72,6 +84,14 @@
         gap: 1rem;
         @include flex(row);
 
+        @media screen and (max-width:$big) {
+          width: 90%;
+        }
+
+        @media screen and (max-width:$normalRes) {
+          gap: .6rem
+        }
+
         @media screen and (max-width:$mobile) {
           width: 100%;
           height: 40%;
@@ -86,6 +106,15 @@
         }
 
         &:after {
+
+          @media screen and (max-width:$normalRes) {
+            font-size: 2vw !important;
+          }
+
+          @media screen and (max-width:$mobile) {
+            font-size: 3vw !important;
+          }
+
           @media screen and (max-width:$mobileSml) {
             font-size: 4vw !important;
           }
@@ -95,6 +124,11 @@
           display: block;
           height: 90%;
           margin-left: 0;
+
+          @media screen and (max-width:$normal) {
+            height: 70%;
+
+          }
 
           @media screen and (max-width:$mobile) {
             height: 80%;
@@ -349,7 +383,7 @@
     transition: transform 1.4s ease-in-out;
 
     @media screen and (max-width:$mobile) {
-      width: 70%;
+      width: 100%;
 
     }
 
@@ -380,7 +414,7 @@
 
   @media screen and (max-width:$mobile) {
     z-index: 1;
-    top: 85%;
+    top: 83%;
     left: 0;
     flex-direction: row;
     width: 100%;
@@ -389,11 +423,6 @@
     row-gap: 2rem;
     height: auto;
   }
-
-
-
-
-
 
   div {
     @include flex(column);
@@ -490,7 +519,6 @@
     @media screen and (max-width:$mobile) {
       background-color: transparent;
     }
-
   }
 
   &:hover div {
@@ -499,7 +527,6 @@
 
     @media screen and (max-width:$mobile) {
       left: -.3rem;
-
     }
   }
 
@@ -520,9 +547,15 @@
     margin-bottom: 0;
     transition: all 1s ease-in-out;
 
+    @media screen and (max-width:$normalRes) {
+      top: 0.5rem;
+    }
+
     @media screen and (max-width:$mobile) {
+      height: 5%;
       top: 0.3rem;
     }
+
   }
 
   .line2 {
@@ -536,8 +569,13 @@
     border-radius: 10px;
     transition: all 1s ease-in-out;
 
+    @media screen and (max-width:$normalRes) {
+      top: -0.5rem;
+    }
+
     @media screen and (max-width:$mobile) {
-      top: -0.3rem;
+      top: -0.2rem;
+      height: 5%;
     }
   }
 }
@@ -551,6 +589,7 @@
   @include flex(column);
   gap: 0;
   transition: all 1s ease-in-out;
+
 
   &:hover {
     background-color: $gold;
@@ -567,10 +606,11 @@
 
     @media screen and (max-width:$mobile) {
       right: -.3rem;
-
     }
 
+
   }
+
 
 
   @media screen and (max-width:$mobile) {
@@ -589,8 +629,15 @@
     margin-bottom: 0;
     transition: all 1s ease-in-out;
 
+
+
+    @media screen and (max-width:$normalRes) {
+      top: 0.5rem;
+    }
+
     @media screen and (max-width:$mobile) {
-      top: 0.3rem;
+      top: 0.2rem;
+      height: 5%;
     }
   }
 
@@ -605,9 +652,15 @@
     border-radius: 10px;
     transition: all 1s ease-in-out;
 
-    @media screen and (max-width:$mobile) {
-      top: -0.3rem;
+    @media screen and (max-width:$normalRes) {
+      top: -0.5rem;
     }
+
+    @media screen and (max-width:$mobile) {
+      top: -0.2rem;
+      height: 5%;
+    }
+
   }
 
 

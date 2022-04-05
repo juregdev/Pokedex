@@ -42,7 +42,7 @@ const formingCard = (response) => {
       <h1>+</h1>
     </div>
   `     
-  document.querySelector(".conteiner").innerHTML = card
+  document.querySelector(".conteinerDetails").innerHTML = card
 }
 
 const formingCardNextPokemon = (response) => {
@@ -82,7 +82,7 @@ const formingCardNextPokemon = (response) => {
       <h1>+</h1>
     </div>
   `     
-  document.querySelector(".conteiner").innerHTML = card
+  document.querySelector(".conteinerDetails").innerHTML = card
 }
 
 
@@ -166,29 +166,29 @@ const moreInfo = () => {
         info.children[0].textContent = "-"
         setTimeout(() =>{cardInfo.style.zIndex = "1"}, 170)
       }
-}*/
-
-const nextPokemon = () => {
+    }*/
+      
+      
+      const nextPokemon = () => {
+        
+        idFornextAndPrevious++
  
-idFornextAndPrevious++
- 
-
-axios.get(`${baseUrlPokeApi}${idFornextAndPrevious}`).then(response =>{
-  document.querySelector(".cardDetails").classList.remove('transitionInRight')
-    document.querySelector(".cardDetails").classList.add('transitionOutRight')
-    document.querySelector(".informations").classList.remove('transitionInRight')
-    document.querySelector(".informations").classList.add('transitionOutRight')
-    document.querySelector("#moreInformations").classList.remove('transitionInRight')
-    document.querySelector("#moreInformations").classList.add('transitionOutRight')
-  
-
- 
-
+        
+        axios.get(`${baseUrlPokeApi}${idFornextAndPrevious}`).then(response =>{
+          document.querySelector(".cardDetails").classList.remove('transitionInRight')
+          document.querySelector(".cardDetails").classList.add('transitionOutRight')
+          document.querySelector(".informations").classList.remove('transitionInRight')
+          document.querySelector(".informations").classList.add('transitionOutRight')
+          document.querySelector("#moreInformations").classList.remove('transitionInRight')
+          document.querySelector("#moreInformations").classList.add('transitionOutRight')
+          
+   
+              
 setTimeout(() =>{
   formingCardNextPokemon(response)},500)
 }).catch(
   error => { cardError()
-})
+  })
 }
 
 const previousPokemon = () => {
