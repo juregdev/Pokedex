@@ -790,7 +790,7 @@ body {
 
 @media screen and (max-width: 600px) {
   #btnAbilities button {
-    width: 30%;
+    width: 25%;
     font-size: 4vw;
   }
 }
@@ -893,18 +893,6 @@ body {
           animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-#LogoDetails {
-  position: absolute;
-  top: 47%;
-  right: 28%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-#LogoDetails img {
-  width: 10vw;
-}
-
 .cardDetails {
   position: absolute;
   z-index: 1;
@@ -915,11 +903,12 @@ body {
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
           box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
+  margin: 0;
 }
 
 @media screen and (max-width: 1400px) {
   .cardDetails {
-    width: 50vw;
+    width: 40vw;
   }
 }
 
@@ -932,8 +921,8 @@ body {
 @media screen and (max-width: 600px) {
   .cardDetails {
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 80%;
+    top: 2%;
     border-radius: 0;
   }
 }
@@ -1322,6 +1311,12 @@ body {
   transition: transform 1.4s ease-in-out, -webkit-transform 1.4s ease-in-out;
 }
 
+@media screen and (max-width: 600px) {
+  .cardDetails .imgHover {
+    width: 70%;
+  }
+}
+
 .cardDetails .imgHover:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -1363,17 +1358,17 @@ body {
 @media screen and (max-width: 600px) {
   .informations {
     z-index: 1;
-    top: 70%;
+    top: 85%;
     left: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
+    height: auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     row-gap: 2rem;
-    background-color: transparent;
     height: auto;
   }
 }
@@ -1484,7 +1479,7 @@ body {
 
 }*/
 .arrowLeft {
-  height: 100%;
+  height: 100vh;
   width: 10%;
   position: fixed;
   top: 0;
@@ -1576,7 +1571,7 @@ body {
 }
 
 .arrowright {
-  height: 100%;
+  height: 100vh;
   width: 10%;
   position: fixed;
   top: 0;
