@@ -384,7 +384,7 @@
 
   @media screen and (max-width:$mobile) {
     z-index: 1;
-    top: 65%;
+    top: 70%;
     left: auto;
     flex-direction: row;
     width: 100%;
@@ -492,6 +492,10 @@
   &:hover {
     background-color: $gold;
 
+    @media screen and (max-width:$mobile) {
+      background-color: transparent;
+    }
+
   }
 
   &:hover div {
@@ -499,12 +503,13 @@
     left: -2rem;
 
     @media screen and (max-width:$mobile) {
-      left: -1rem;
+      left: -.3rem;
     }
   }
 
   @media screen and (max-width:$mobile) {
     z-index: 1;
+    position: absolute;
   }
 
 
@@ -551,6 +556,7 @@
   transition: all 1s ease-in-out;
 
   @media screen and (max-width:$mobile) {
+    position: absolute;
     z-index: 1;
   }
 
@@ -589,6 +595,10 @@
   &:hover {
     background-color: $gold;
 
+    @media screen and (max-width:$mobile) {
+      background-color: transparent;
+    }
+
   }
 
   &:hover div {
@@ -596,7 +606,7 @@
     right: -2rem;
 
     @media screen and (max-width:$mobile) {
-      right: -1rem;
+      right: -.3rem;
     }
 
   }

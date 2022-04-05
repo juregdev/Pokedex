@@ -1363,7 +1363,7 @@ body {
 @media screen and (max-width: 600px) {
   .informations {
     z-index: 1;
-    top: 65%;
+    top: 70%;
     left: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1511,6 +1511,12 @@ body {
   background-color: goldenrod;
 }
 
+@media screen and (max-width: 600px) {
+  .arrowLeft:hover {
+    background-color: transparent;
+  }
+}
+
 .arrowLeft:hover div {
   background-color: #FFDE00;
   left: -2rem;
@@ -1518,13 +1524,14 @@ body {
 
 @media screen and (max-width: 600px) {
   .arrowLeft:hover div {
-    left: -1rem;
+    left: -.3rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .arrowLeft {
     z-index: 1;
+    position: absolute;
   }
 }
 
@@ -1593,6 +1600,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .arrowright {
+    position: absolute;
     z-index: 1;
   }
 }
@@ -1641,6 +1649,12 @@ body {
   background-color: goldenrod;
 }
 
+@media screen and (max-width: 600px) {
+  .arrowright:hover {
+    background-color: transparent;
+  }
+}
+
 .arrowright:hover div {
   background-color: #FFDE00;
   right: -2rem;
@@ -1648,7 +1662,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .arrowright:hover div {
-    right: -1rem;
+    right: -.3rem;
   }
 }
 
