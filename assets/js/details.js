@@ -151,6 +151,7 @@ axios.get(`${baseUrlPokeApi}${idDetails}`).then(response =>{
 //Função para quando o user clicar no botão do card de erro, ele redirecionar para o index
 const backIndexError = () => {window.location.href = "./index.html"}
 
+/*
 const moreInfo = () => {
   const info = document.querySelector("#moreInformations")
   const cardInfo = document.querySelector(".informations")
@@ -165,7 +166,7 @@ const moreInfo = () => {
         info.children[0].textContent = "-"
         setTimeout(() =>{cardInfo.style.zIndex = "1"}, 170)
       }
-}
+}*/
 
 const nextPokemon = () => {
  

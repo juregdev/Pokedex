@@ -68,6 +68,11 @@
     transition: color .5s ease-in-out;
     background: $white;
 
+    @media screen and (max-width:$mobile) {
+      width: 30%;
+      font-size: 4vw;
+    }
+
 
     &:hover {
       background: $blue;

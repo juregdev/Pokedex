@@ -788,6 +788,13 @@ body {
   background: #FFF;
 }
 
+@media screen and (max-width: 600px) {
+  #btnAbilities button {
+    width: 30%;
+    font-size: 4vw;
+  }
+}
+
 #btnAbilities button:hover {
   background: #3d7dca;
   color: white;
@@ -910,6 +917,27 @@ body {
           box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
 }
 
+@media screen and (max-width: 1400px) {
+  .cardDetails {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cardDetails {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardDetails {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 0;
+  }
+}
+
 .cardDetails #titlePoke {
   -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.68);
           box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.68);
@@ -920,8 +948,20 @@ body {
   font-size: 30px;
   text-align: center;
   width: 100%;
-  padding: 2rem 0px;
+  padding: 2rem;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .cardDetails #titlePoke h1#pokeNameDetails {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cardDetails #titlePoke h1#pokeNameDetails {
+    font-size: 5vw;
+  }
 }
 
 .cardDetails .textDetails {
@@ -988,10 +1028,39 @@ body {
           justify-content: center;
 }
 
+@media screen and (max-width: 600px) {
+  .cardDetails .textDetails .contType div {
+    width: 100%;
+    height: 40%;
+    gap: .4rem;
+    margin: .3rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cardDetails .textDetails .contType div {
+    width: 100%;
+    height: 30%;
+    gap: .4rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cardDetails .textDetails .contType div:after {
+    font-size: 4vw !important;
+  }
+}
+
 .cardDetails .textDetails .contType div img {
   display: block;
   height: 90%;
   margin-left: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .cardDetails .textDetails .contType div img {
+    height: 80%;
+  }
 }
 
 .cardDetails .textDetails .contType .grass {
@@ -1215,10 +1284,29 @@ body {
   margin-right: 0;
 }
 
+@media screen and (max-width: 1400px) {
+  .cardDetails .textDetails #idDetails {
+    height: 70%;
+    padding: 1.5rem;
+  }
+}
+
 .cardDetails .textDetails #idDetails p {
   font-size: 1.5vw;
   font-weight: bold;
   display: block;
+}
+
+@media screen and (max-width: 1400px) {
+  .cardDetails .textDetails #idDetails p {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardDetails .textDetails #idDetails p {
+    font-size: 20px;
+  }
 }
 
 .cardDetails .textDetails img {
@@ -1227,6 +1315,7 @@ body {
 
 .cardDetails .imgHover {
   width: 90%;
+  display: block;
   -webkit-transition: -webkit-transform 1.4s ease-in-out;
   transition: -webkit-transform 1.4s ease-in-out;
   transition: transform 1.4s ease-in-out;
@@ -1265,6 +1354,30 @@ body {
           justify-content: center;
 }
 
+@media screen and (max-width: 1400px) {
+  .informations {
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .informations {
+    z-index: 1;
+    top: 65%;
+    left: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 2rem;
+    background-color: transparent;
+    height: auto;
+  }
+}
+
 .informations div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1281,6 +1394,12 @@ body {
           justify-content: center;
   gap: .5rem;
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .informations div {
+    width: 30%;
+  }
 }
 
 .informations div h2 {
@@ -1318,6 +1437,18 @@ body {
   border-radius: 10px;
   z-index: 0;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+  #moreInformations {
+    left: 22%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #moreInformations {
+    display: none;
+  }
 }
 
 /*
@@ -1385,6 +1516,18 @@ body {
   left: -2rem;
 }
 
+@media screen and (max-width: 600px) {
+  .arrowLeft:hover div {
+    left: -1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .arrowLeft {
+    z-index: 1;
+  }
+}
+
 .arrowLeft .line1 {
   width: 10%;
   height: 10%;
@@ -1399,6 +1542,12 @@ body {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (max-width: 600px) {
+  .arrowLeft .line1 {
+    top: 0.3rem;
+  }
+}
+
 .arrowLeft .line2 {
   margin-top: 0;
   width: 10%;
@@ -1411,6 +1560,12 @@ body {
   border-radius: 10px;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .arrowLeft .line2 {
+    top: -0.3rem;
+  }
 }
 
 .arrowright {
@@ -1436,6 +1591,12 @@ body {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (max-width: 600px) {
+  .arrowright {
+    z-index: 1;
+  }
+}
+
 .arrowright .line1 {
   width: 10%;
   height: 10%;
@@ -1448,6 +1609,12 @@ body {
   margin-bottom: 0;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .arrowright .line1 {
+    top: 0.3rem;
+  }
 }
 
 .arrowright .line2 {
@@ -1464,6 +1631,12 @@ body {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (max-width: 600px) {
+  .arrowright .line2 {
+    top: -0.3rem;
+  }
+}
+
 .arrowright:hover {
   background-color: goldenrod;
 }
@@ -1471,6 +1644,12 @@ body {
 .arrowright:hover div {
   background-color: #FFDE00;
   right: -2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .arrowright:hover div {
+    right: -1rem;
+  }
 }
 
 .transitionOut {
