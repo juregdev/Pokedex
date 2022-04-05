@@ -18,8 +18,8 @@ const cardCreate = (pause) =>{
       document.querySelector("#loading").classList.remove("visibleLoading")
       document.querySelector("#loading").classList.add("invisibleLoading")   
       document.querySelector("body").style.overflow = ""
-      setTimeout(() =>{   document.querySelector("#loading").style.display = "none"}, 1000)
-    } else {
+     setTimeout(() =>{   document.querySelector("#loading").style.display = "none"}, 1000)
+  } else {
       document.querySelector("#loading").classList.add("visibleLoading")
       document.querySelector("#loading").classList.remove("invisibleLoading")
       document.querySelector("body").style.overflow = "hidden"
@@ -59,7 +59,9 @@ const formingCard = (response) => {
       </a>
       <div class="text">
         <div>
-          ${typeIdentifier(response.data.types)}
+          <div id="types">
+            ${typeIdentifier(response.data.types)}
+          </div>
           <p id="pokeID">#${response.data.id}</p>
         </div>
       </div>

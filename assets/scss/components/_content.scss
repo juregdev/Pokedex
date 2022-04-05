@@ -1,4 +1,5 @@
 .conteiner {
+  width: 100%;
 
   img {
     display: block
@@ -54,12 +55,20 @@
   }
 
   .content {
-    width: 100vw;
     margin-top: 3rem;
     @include flex(row);
     flex-wrap: wrap;
     gap: 1rem;
     padding: 0 5rem;
+    width: 100vw;
+
+    @media screen and (max-width:$mobile) {
+      padding: 0 1rem;
+    }
+
+    @media screen and (max-width:$mobileSml) {
+      padding: 0 .5rem;
+    }
 
 
 
@@ -69,10 +78,27 @@
       height: 10%;
       border-radius: 8px;
       background: $white;
+      position: relative;
       padding: 2rem;
       font-family: verdana, "sans-serif";
       box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
       transition: transform 1.5s .6s ease-in-out;
+
+      @media screen and (max-width:$big) {
+        width: 18%
+      }
+
+      @media screen and (max-width:$normalRes) {
+        width: 30%
+      }
+
+      @media screen and (max-width:$mobile) {
+        width: 45%
+      }
+
+      @media screen and (max-width:$mobileSml) {
+        width: 80%
+      }
 
 
       a {
@@ -83,6 +109,15 @@
         &:hover {
           color: $red;
         }
+
+        #pokeName {
+          font-size: 1vw;
+
+          @media screen and (max-width:$mobileSml) {
+            font-size: 35px;
+          }
+
+        }
       }
 
       .imgHover {
@@ -90,6 +125,10 @@
 
         &:hover {
           transform: scale(1.5);
+
+          @media screen and (max-width:$mobile) {
+            transform: scale(1.2);
+          }
         }
       }
 
@@ -98,13 +137,19 @@
       &:hover {
         position: relative;
         z-index: 1;
-        transform: scale(1.5)
+        transform: scale(1.5);
+
+        @media screen and (max-width:$mobile) {
+          transform: scale(1.2);
+        }
       }
 
 
       h1 {
         margin-bottom: 1rem;
-        font-size: 20px
+        font-size: 20px;
+
+
       }
 
       img {
@@ -112,31 +157,56 @@
       }
 
       .text {
-
+        position: relative;
         margin-bottom: 1rem;
+        width: 100%;
+        height: 2vh;
 
         div {
+          position: relative;
           margin: 0;
           @include flex(row);
           gap: 1rem;
+          width: 100%;
+          height: 100%;
 
           p {
             font-weight: bold;
             font-size: 1vw;
-            margin-right: 2rem;
+            position: absolute;
+            right: 0;
+
+          }
+
+          #types {
+            position: absolute;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            padding-left: 0;
+            gap: .5rem;
+
+            @include flex(row);
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            img {
+              width: 30%;
+              margin-left: 0;
+              border-radius: 100%;
+
+
+
+              @media screen and (max-width:$mobileSml) {
+                width: 30%;
+                margin: 0;
+              }
+            }
           }
 
 
 
 
-          img {
-            width: 15%;
-            margin: 0;
-            border-radius: 100%;
-            position: relative;
-
-
-          }
 
 
 

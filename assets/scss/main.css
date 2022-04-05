@@ -7,7 +7,7 @@
 
 html,
 body {
-  width: 100%;
+  width: 100vw;
   margin: 0;
 }
 
@@ -31,6 +31,7 @@ body {
 }
 
 .conteiner {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,7 +120,6 @@ body {
 }
 
 .conteiner .content {
-  width: 100vw;
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,6 +138,19 @@ body {
       flex-wrap: wrap;
   gap: 1rem;
   padding: 0 5rem;
+  width: 100vw;
+}
+
+@media screen and (max-width: 600px) {
+  .conteiner .content {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .conteiner .content {
+    padding: 0 .5rem;
+  }
 }
 
 .conteiner .content .card {
@@ -146,6 +159,7 @@ body {
   height: 10%;
   border-radius: 8px;
   background: #FFF;
+  position: relative;
   padding: 2rem;
   font-family: verdana, "sans-serif";
   -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
@@ -154,6 +168,30 @@ body {
   transition: -webkit-transform 1.5s .6s ease-in-out;
   transition: transform 1.5s .6s ease-in-out;
   transition: transform 1.5s .6s ease-in-out, -webkit-transform 1.5s .6s ease-in-out;
+}
+
+@media screen and (max-width: 1400px) {
+  .conteiner .content .card {
+    width: 18%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .conteiner .content .card {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .conteiner .content .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .conteiner .content .card {
+    width: 80%;
+  }
 }
 
 .conteiner .content .card a {
@@ -165,6 +203,16 @@ body {
 
 .conteiner .content .card a:hover {
   color: #FF0000;
+}
+
+.conteiner .content .card a #pokeName {
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 300px) {
+  .conteiner .content .card a #pokeName {
+    font-size: 35px;
+  }
 }
 
 .conteiner .content .card .imgHover {
@@ -179,11 +227,25 @@ body {
           transform: scale(1.5);
 }
 
+@media screen and (max-width: 600px) {
+  .conteiner .content .card .imgHover:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
 .conteiner .content .card:hover {
   position: relative;
   z-index: 1;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+@media screen and (max-width: 600px) {
+  .conteiner .content .card:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }
 
 .conteiner .content .card h1 {
@@ -196,10 +258,14 @@ body {
 }
 
 .conteiner .content .card .text {
+  position: relative;
   margin-bottom: 1rem;
+  width: 100%;
+  height: 2vh;
 }
 
 .conteiner .content .card .text div {
+  position: relative;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,19 +281,56 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
+  width: 100%;
+  height: 100%;
 }
 
 .conteiner .content .card .text div p {
   font-weight: bold;
   font-size: 1vw;
-  margin-right: 2rem;
+  position: absolute;
+  right: 0;
 }
 
-.conteiner .content .card .text div img {
-  width: 15%;
-  margin: 0;
+.conteiner .content .card .text div #types {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  padding-left: 0;
+  gap: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.conteiner .content .card .text div #types img {
+  width: 30%;
+  margin-left: 0;
   border-radius: 100%;
-  position: relative;
+}
+
+@media screen and (max-width: 300px) {
+  .conteiner .content .card .text div #types img {
+    width: 30%;
+    margin: 0;
+  }
 }
 
 @-webkit-keyframes search {
@@ -617,24 +720,72 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 120vw;
+  width: 100%;
   height: 100%;
   top: 0;
+  left: 0;
+  margin: 0;
   background: #3d7dca;
 }
 
 #loading .pokebola {
-  width: 10%;
+  width: 15%;
   margin-bottom: 0;
   -webkit-animation: Pokeball 10s infinite;
           animation: Pokeball 10s infinite;
 }
 
+@media screen and (max-width: 1000px) {
+  #loading .pokebola {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #loading .pokebola {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #loading .pokebola {
+    width: 50%;
+  }
+}
+
 #loading .pokemon {
   margin-bottom: 0;
-  width: 10%;
+  width: 15%;
   -webkit-animation: pokemon 3s infinite;
           animation: pokemon 3s infinite;
+}
+
+@media screen and (max-width: 1000px) {
+  #loading .pokemon {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #loading .pokemon {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #loading .pokemon {
+    width: 50%;
+  }
+}
+
+#loading #textLoad {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 300px) {
+  #loading #textLoad {
+    font-size: 30px;
+  }
 }
 
 .invisibleLoading {

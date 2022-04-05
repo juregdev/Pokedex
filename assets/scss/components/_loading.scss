@@ -1,24 +1,57 @@
 #loading {
   position: fixed;
   @include flex(column);
-  width: 120vw;
+  width: 100%;
   height: 100%;
   top: 0;
+  left: 0;
+  margin: 0;
   background: $blue;
 
-
-
   .pokebola {
-    width: 10%;
+    width: 15%;
     margin-bottom: 0;
     animation: Pokeball 10s infinite;
+
+    @media screen and (max-width:$normalRes) {
+      width: 25%;
+    }
+
+    @media screen and (max-width:$mobile) {
+      width: 30%;
+    }
+
+    @media screen and (max-width:$mobileSml) {
+      width: 50%;
+    }
   }
 
   .pokemon {
     margin-bottom: 0;
-    width: 10%;
+    width: 15%;
     animation: pokemon 3s infinite;
+
+    @media screen and (max-width:$normalRes) {
+      width: 25%;
+    }
+
+    @media screen and (max-width:$mobile) {
+      width: 30%;
+    }
+
+    @media screen and (max-width:$mobileSml) {
+      width: 50%;
+    }
   }
+
+  #textLoad {
+    margin-top: 1rem;
+
+    @media screen and (max-width:$mobileSml) {
+      font-size: 30px;
+    }
+  }
+
 }
 
 .invisibleLoading {
