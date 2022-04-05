@@ -30,6 +30,10 @@ body {
   overflow-x: hidden;
 }
 
+#pokelogo {
+  width: 70vw;
+}
+
 .conteiner {
   width: 100%;
   display: -webkit-box;
