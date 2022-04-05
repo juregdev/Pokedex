@@ -174,7 +174,7 @@ idFornextAndPrevious++
  
 
 axios.get(`${baseUrlPokeApi}${idFornextAndPrevious}`).then(response =>{
-   document.querySelector(".cardDetails").classList.remove('transitionInRight')
+  document.querySelector(".cardDetails").classList.remove('transitionInRight')
     document.querySelector(".cardDetails").classList.add('transitionOutRight')
     document.querySelector(".informations").classList.remove('transitionInRight')
     document.querySelector(".informations").classList.add('transitionOutRight')
