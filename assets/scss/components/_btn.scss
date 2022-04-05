@@ -12,6 +12,21 @@
   font-weight: bold;
   margin: 3rem;
   transition: all 1s ease-in-out;
+
+  @media screen and (max-width:$big) {
+    width: 25%;
+    font-size: 16px
+  }
+
+  @media screen and (max-width:$normalRes) {
+    width: 40%;
+    font-size: 25px
+  }
+
+  @media screen and (max-width:$mobile) {
+    width: 80%;
+    font-size: 25px;
+  }
 }
 
 

@@ -31,7 +31,13 @@ body {
 }
 
 #pokelogo {
-  width: 70vw;
+  width: 40vw;
+}
+
+@media screen and (max-width: 1000px) {
+  #pokelogo {
+    width: 70vw;
+  }
 }
 
 .conteiner {
@@ -74,8 +80,26 @@ body {
   width: 20vw;
 }
 
+@media screen and (max-width: 1400px) {
+  .conteiner .search {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .conteiner .search {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .conteiner .search {
+    width: 80vw;
+  }
+}
+
 .conteiner .search input {
-  width: 13vw;
+  width: 70%;
   height: 100%;
   border-radius: 0;
   border: none;
@@ -87,7 +111,7 @@ body {
 }
 
 .conteiner .search button {
-  width: 7vw;
+  width: 30%;
   height: 100%;
   border: none;
   border-radius: 0;
@@ -211,11 +235,30 @@ body {
 
 .conteiner .content .card a #pokeName {
   font-size: 1vw;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .conteiner .content .card a #pokeName {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .conteiner .content .card a #pokeName {
+    font-size: 1.7vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .conteiner .content .card a #pokeName {
+    font-size: 3.2vw;
+  }
 }
 
 @media screen and (max-width: 300px) {
   .conteiner .content .card a #pokeName {
-    font-size: 35px;
+    font-size: 20px;
   }
 }
 
@@ -252,18 +295,13 @@ body {
   }
 }
 
-.conteiner .content .card h1 {
-  margin-bottom: 1rem;
-  font-size: 20px;
-}
-
 .conteiner .content .card img {
   width: 100%;
 }
 
 .conteiner .content .card .text {
   position: relative;
-  margin-bottom: 1rem;
+  margin: 0 1rem;
   width: 100%;
   height: 2vh;
 }
@@ -290,10 +328,35 @@ body {
 }
 
 .conteiner .content .card .text div p {
+  width: 50%;
   font-weight: bold;
   font-size: 1vw;
   position: absolute;
   right: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  .conteiner .content .card .text div p {
+    font-size: 1.3vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .conteiner .content .card .text div p {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .conteiner .content .card .text div p {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .conteiner .content .card .text div p {
+    font-size: 18px;
+  }
 }
 
 .conteiner .content .card .text div #types {
@@ -302,7 +365,6 @@ body {
   width: 50%;
   height: 100%;
   padding-left: 0;
-  gap: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,11 +384,12 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  gap: 0.2rem;
 }
 
 .conteiner .content .card .text div #types img {
   width: 30%;
-  margin-left: 0;
+  margin: 0;
   border-radius: 100%;
 }
 
@@ -656,6 +719,27 @@ body {
   margin: 3rem;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 1400px) {
+  .more {
+    width: 25%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .more {
+    width: 40%;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .more {
+    width: 80%;
+    font-size: 25px;
+  }
 }
 
 #btnError {
