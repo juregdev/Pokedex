@@ -1,11 +1,6 @@
-let input = document.querySelector('#pokeSearch'); // Variavel que guarda posição da pesquisa
-
-
 const baseUrlPokeApi ="https://pokeapi.co/api/v2/pokemon/" //Url base para fazer a função dos pokemons
 
-
 let id = 1; //Id inicial para buscar 
-
 
 // Função que automatiza a criação de cartoes com parametro para pausar
 const cardCreate = (pause) =>{
@@ -65,7 +60,7 @@ const formingCard = (response) => {
           <p id="pokeID">#${response.data.id}</p>
         </div>
       </div>
-      <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
+      <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="${response.data.forms[0].name}">
     </div>`
 
   document.querySelector(".content").innerHTML += card
@@ -80,6 +75,8 @@ const typeIdentifier = (data) => {
   }
   return url
 }
+
+
 
 //Função para resolver problema de "-" no e acessar o item com o nome official-artwork
 const urlImg = (dataUrl) => {

@@ -1,0 +1,675 @@
+.conteinerTypes {
+  position: relative;
+  width: 100%;
+  @include flex(column);
+}
+
+#contTP {
+  @include flex(row);
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  margin-bottom: 10%;
+
+  #doubleFrom,
+  #doubleTo,
+  #halfFrom,
+  #halfTo,
+  #noFrom,
+  #noTo {
+    width: 15%;
+    height: 100%;
+    background-color: $white;
+    @include flex(column);
+    border-radius: 10px;
+    gap: .5rem;
+    padding-bottom: .5rem;
+    margin: 0;
+    position: relative;
+
+    h1 {
+
+      width: 100%;
+      margin: 0;
+      background-color: $blue;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    div {
+      width: 80%;
+      height: 15%;
+      @include flex(row);
+      border-radius: 10px;
+      cursor: pointer;
+
+      img {
+        display: block;
+        margin: 0;
+      }
+    }
+
+
+    .grass {
+      background-color: $grass;
+
+      &::after {
+        content: "GRASS";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .poison {
+      background-color: $poison;
+
+      &::after {
+        content: "POISON";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .electric {
+      background-color: $eletric;
+
+      &::after {
+        content: "ELETRIC";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .water {
+      background-color: $water;
+
+      &::after {
+        content: "WATER";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .fire {
+      background-color: $fire;
+
+      &::after {
+        content: "FIRE";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .bug {
+      background-color: $bug;
+
+      &::after {
+        content: "BUG";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .flying {
+      background-color: $flying;
+
+      &::after {
+        content: "FLYING";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .normal {
+      background-color: $normal;
+
+      &::after {
+        content: "NORMAL";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .ground {
+      background-color: $ground;
+
+      &::after {
+        content: "GROUND";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .fairy {
+      background-color: $fairy;
+
+      &::after {
+        content: "FAIRY";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .dark {
+      background-color: $dark;
+
+      &::after {
+        content: "DARK";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .ghost {
+      background-color: $ghost;
+
+
+      &::after {
+        content: "GHOST";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .fighting {
+      background-color: $fighting;
+
+      &::after {
+        content: "FIGHTING";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .psychic {
+      background-color: $psychic;
+
+      &::after {
+        content: "PSYCHIC";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .rock {
+      background-color: $rock;
+
+      &::after {
+        content: "ROCK";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .ice {
+      background-color: $ice;
+
+      &::after {
+        content: "ICE";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .steel {
+      background-color: $steel;
+
+      &::after {
+        content: "STEEL";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .dragon {
+      background-color: $dragon;
+
+      &::after {
+        content: "DRAGON";
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+
+
+    #noExistDamage {
+      width: 100%;
+      padding: 1rem;
+
+      p {
+        margin: 0;
+        width: 100%;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: normal;
+      }
+    }
+  }
+}
+
+
+.contMainType {
+  .grass {
+    background-color: $grass;
+
+    &::after {
+      content: "GRASS";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .poison {
+    background-color: $poison;
+
+    &::after {
+      content: "POISON";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .electric {
+    background-color: $eletric;
+
+    &::after {
+      content: "ELETRIC";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .water {
+    background-color: $water;
+
+    &::after {
+      content: "WATER";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .fire {
+    background-color: $fire;
+
+    &::after {
+      content: "FIRE";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .bug {
+    background-color: $bug;
+
+    &::after {
+      content: "BUG";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .flying {
+    background-color: $flying;
+
+    &::after {
+      content: "FLYING";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .normal {
+    background-color: $normal;
+
+    &::after {
+      content: "NORMAL";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .ground {
+    background-color: $ground;
+
+    &::after {
+      content: "GROUND";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .fairy {
+    background-color: $fairy;
+
+    &::after {
+      content: "FAIRY";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .dark {
+    background-color: $dark;
+
+    &::after {
+      content: "DARK";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .ghost {
+    background-color: $ghost;
+
+
+    &::after {
+      content: "GHOST";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .fighting {
+    background-color: $fighting;
+
+    &::after {
+      content: "FIGHTING";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .psychic {
+    background-color: $psychic;
+
+    &::after {
+      content: "PSYCHIC";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .rock {
+    background-color: $rock;
+
+    &::after {
+      content: "ROCK";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .ice {
+    background-color: $ice;
+
+    &::after {
+      content: "ICE";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .steel {
+    background-color: $steel;
+
+    &::after {
+      content: "STEEL";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .dragon {
+    background-color: $dragon;
+
+    &::after {
+      content: "DRAGON";
+      font-size: 16px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+}
+
+#mainType {
+  width: 100vw;
+  height: 10rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  @include flex(row);
+
+  img {
+    height: 100%;
+    margin: 0
+  }
+
+  &:after {
+    font-size: 40px;
+  }
+}
+
+.contentTypes {
+  margin-top: 3rem;
+  @include flex(row);
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 5rem;
+  width: 100vw;
+
+  @media screen and (max-width:$mobile) {
+    padding: 0 1rem;
+  }
+
+  @media screen and (max-width:$mobileSml) {
+    padding: 0 .5rem;
+  }
+
+
+
+  .cardPokeTypes {
+    text-align: center;
+    width: 16%;
+    height: 10%;
+    border-radius: 8px;
+    background: $white;
+    position: relative;
+    padding: 2rem;
+    font-family: verdana, "sans-serif";
+    box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
+    transition: transform 1.5s .6s ease-in-out;
+
+    @media screen and (max-width:$big) {
+      width: 18%
+    }
+
+    @media screen and (max-width:$normalRes) {
+      width: 30%
+    }
+
+    @media screen and (max-width:$mobile) {
+      width: 45%
+    }
+
+    @media screen and (max-width:$mobileSml) {
+      width: 80%
+    }
+
+
+    a {
+      text-decoration: none;
+      color: $black;
+      transition: color .5s ease-in-out;
+
+
+      &:hover {
+        color: $red;
+      }
+
+      #pokeName {
+        font-size: 1vw;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width:$big) {
+          font-size: 1.5vw;
+        }
+
+        @media screen and (max-width:$normalRes) {
+          font-size: 1.7vw
+        }
+
+
+        @media screen and (max-width:$mobile) {
+          font-size: 3.2vw
+        }
+
+        @media screen and (max-width:$mobileSml) {
+          font-size: 20px;
+        }
+
+      }
+    }
+
+    .imgHover {
+      transition: transform 1.5s .3s ease-in-out;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.3);
+
+        @media screen and (max-width:$mobile) {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+
+    &:hover {
+      position: relative;
+      z-index: 1;
+      transform: scale(1.3);
+
+      @media screen and (max-width:$mobile) {
+        transform: scale(1.2);
+      }
+    }
+
+
+    .text {
+      position: relative;
+      width: 100%;
+      height: 4vh;
+
+      div {
+        position: relative;
+        margin: 0;
+        @include flex(row);
+        gap: 1rem;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+
+        p {
+          width: 50%;
+          text-align: right;
+          font-weight: bold;
+          font-size: 1vw;
+          position: absolute;
+          right: 0;
+
+          @media screen and (max-width:$big) {
+            font-size: 1.3vw
+          }
+
+
+          @media screen and (max-width:$normalRes) {
+            font-size: 2vw
+          }
+
+
+          @media screen and (max-width:$mobile) {
+            font-size: 3vw
+          }
+
+          @media screen and (max-width:$mobileSml) {
+            font-size: 18px
+          }
+
+        }
+
+        #types {
+          position: absolute;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          padding-left: 0;
+          @include flex(row);
+          align-items: flex-start;
+          border-radius: 10px;
+          gap: 0.2rem;
+
+          img {
+            height: 100%;
+            margin: 0;
+            border-radius: 100%;
+
+
+
+            @media screen and (max-width:$mobileSml) {
+              width: 30%;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#typePokeTitle {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 30px;
+  background-color: $white;
+  padding: 2rem 0;
+}

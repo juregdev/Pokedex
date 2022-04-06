@@ -1796,4 +1796,1011 @@ body {
   -webkit-animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
+
+.conteinerTypes {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contTP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+#contTP #doubleFrom,
+#contTP #doubleTo,
+#contTP #halfFrom,
+#contTP #halfTo,
+#contTP #noFrom,
+#contTP #noTo {
+  width: 15%;
+  height: 100%;
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  gap: .5rem;
+  padding-bottom: .5rem;
+  margin: 0;
+  position: relative;
+}
+
+#contTP #doubleFrom h1,
+#contTP #doubleTo h1,
+#contTP #halfFrom h1,
+#contTP #halfTo h1,
+#contTP #noFrom h1,
+#contTP #noTo h1 {
+  width: 100%;
+  margin: 0;
+  background-color: #3d7dca;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#contTP #doubleFrom div,
+#contTP #doubleTo div,
+#contTP #halfFrom div,
+#contTP #halfTo div,
+#contTP #noFrom div,
+#contTP #noTo div {
+  width: 80%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#contTP #doubleFrom div img,
+#contTP #doubleTo div img,
+#contTP #halfFrom div img,
+#contTP #halfTo div img,
+#contTP #noFrom div img,
+#contTP #noTo div img {
+  display: block;
+  margin: 0;
+}
+
+#contTP #doubleFrom .grass,
+#contTP #doubleTo .grass,
+#contTP #halfFrom .grass,
+#contTP #halfTo .grass,
+#contTP #noFrom .grass,
+#contTP #noTo .grass {
+  background-color: #40a749;
+}
+
+#contTP #doubleFrom .grass::after,
+#contTP #doubleTo .grass::after,
+#contTP #halfFrom .grass::after,
+#contTP #halfTo .grass::after,
+#contTP #noFrom .grass::after,
+#contTP #noTo .grass::after {
+  content: "GRASS";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .poison,
+#contTP #doubleTo .poison,
+#contTP #halfFrom .poison,
+#contTP #halfTo .poison,
+#contTP #noFrom .poison,
+#contTP #noTo .poison {
+  background-color: #ff00ea;
+}
+
+#contTP #doubleFrom .poison::after,
+#contTP #doubleTo .poison::after,
+#contTP #halfFrom .poison::after,
+#contTP #halfTo .poison::after,
+#contTP #noFrom .poison::after,
+#contTP #noTo .poison::after {
+  content: "POISON";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .electric,
+#contTP #doubleTo .electric,
+#contTP #halfFrom .electric,
+#contTP #halfTo .electric,
+#contTP #noFrom .electric,
+#contTP #noTo .electric {
+  background-color: goldenrod;
+}
+
+#contTP #doubleFrom .electric::after,
+#contTP #doubleTo .electric::after,
+#contTP #halfFrom .electric::after,
+#contTP #halfTo .electric::after,
+#contTP #noFrom .electric::after,
+#contTP #noTo .electric::after {
+  content: "ELETRIC";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .water,
+#contTP #doubleTo .water,
+#contTP #halfFrom .water,
+#contTP #halfTo .water,
+#contTP #noFrom .water,
+#contTP #noTo .water {
+  background-color: #4073a7;
+}
+
+#contTP #doubleFrom .water::after,
+#contTP #doubleTo .water::after,
+#contTP #halfFrom .water::after,
+#contTP #halfTo .water::after,
+#contTP #noFrom .water::after,
+#contTP #noTo .water::after {
+  content: "WATER";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .fire,
+#contTP #doubleTo .fire,
+#contTP #halfFrom .fire,
+#contTP #halfTo .fire,
+#contTP #noFrom .fire,
+#contTP #noTo .fire {
+  background-color: #df8600;
+}
+
+#contTP #doubleFrom .fire::after,
+#contTP #doubleTo .fire::after,
+#contTP #halfFrom .fire::after,
+#contTP #halfTo .fire::after,
+#contTP #noFrom .fire::after,
+#contTP #noTo .fire::after {
+  content: "FIRE";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .bug,
+#contTP #doubleTo .bug,
+#contTP #halfFrom .bug,
+#contTP #halfTo .bug,
+#contTP #noFrom .bug,
+#contTP #noTo .bug {
+  background-color: #8ddd94;
+}
+
+#contTP #doubleFrom .bug::after,
+#contTP #doubleTo .bug::after,
+#contTP #halfFrom .bug::after,
+#contTP #halfTo .bug::after,
+#contTP #noFrom .bug::after,
+#contTP #noTo .bug::after {
+  content: "BUG";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .flying,
+#contTP #doubleTo .flying,
+#contTP #halfFrom .flying,
+#contTP #halfTo .flying,
+#contTP #noFrom .flying,
+#contTP #noTo .flying {
+  background-color: #275296;
+}
+
+#contTP #doubleFrom .flying::after,
+#contTP #doubleTo .flying::after,
+#contTP #halfFrom .flying::after,
+#contTP #halfTo .flying::after,
+#contTP #noFrom .flying::after,
+#contTP #noTo .flying::after {
+  content: "FLYING";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .normal,
+#contTP #doubleTo .normal,
+#contTP #halfFrom .normal,
+#contTP #halfTo .normal,
+#contTP #noFrom .normal,
+#contTP #noTo .normal {
+  background-color: gray;
+}
+
+#contTP #doubleFrom .normal::after,
+#contTP #doubleTo .normal::after,
+#contTP #halfFrom .normal::after,
+#contTP #halfTo .normal::after,
+#contTP #noFrom .normal::after,
+#contTP #noTo .normal::after {
+  content: "NORMAL";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .ground,
+#contTP #doubleTo .ground,
+#contTP #halfFrom .ground,
+#contTP #halfTo .ground,
+#contTP #noFrom .ground,
+#contTP #noTo .ground {
+  background-color: #71522b;
+}
+
+#contTP #doubleFrom .ground::after,
+#contTP #doubleTo .ground::after,
+#contTP #halfFrom .ground::after,
+#contTP #halfTo .ground::after,
+#contTP #noFrom .ground::after,
+#contTP #noTo .ground::after {
+  content: "GROUND";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .fairy,
+#contTP #doubleTo .fairy,
+#contTP #halfFrom .fairy,
+#contTP #halfTo .fairy,
+#contTP #noFrom .fairy,
+#contTP #noTo .fairy {
+  background-color: pink;
+}
+
+#contTP #doubleFrom .fairy::after,
+#contTP #doubleTo .fairy::after,
+#contTP #halfFrom .fairy::after,
+#contTP #halfTo .fairy::after,
+#contTP #noFrom .fairy::after,
+#contTP #noTo .fairy::after {
+  content: "FAIRY";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .dark,
+#contTP #doubleTo .dark,
+#contTP #halfFrom .dark,
+#contTP #halfTo .dark,
+#contTP #noFrom .dark,
+#contTP #noTo .dark {
+  background-color: #0c0c0c;
+}
+
+#contTP #doubleFrom .dark::after,
+#contTP #doubleTo .dark::after,
+#contTP #halfFrom .dark::after,
+#contTP #halfTo .dark::after,
+#contTP #noFrom .dark::after,
+#contTP #noTo .dark::after {
+  content: "DARK";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .ghost,
+#contTP #doubleTo .ghost,
+#contTP #halfFrom .ghost,
+#contTP #halfTo .ghost,
+#contTP #noFrom .ghost,
+#contTP #noTo .ghost {
+  background-color: #190722;
+}
+
+#contTP #doubleFrom .ghost::after,
+#contTP #doubleTo .ghost::after,
+#contTP #halfFrom .ghost::after,
+#contTP #halfTo .ghost::after,
+#contTP #noFrom .ghost::after,
+#contTP #noTo .ghost::after {
+  content: "GHOST";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .fighting,
+#contTP #doubleTo .fighting,
+#contTP #halfFrom .fighting,
+#contTP #halfTo .fighting,
+#contTP #noFrom .fighting,
+#contTP #noTo .fighting {
+  background-color: #d14141;
+}
+
+#contTP #doubleFrom .fighting::after,
+#contTP #doubleTo .fighting::after,
+#contTP #halfFrom .fighting::after,
+#contTP #halfTo .fighting::after,
+#contTP #noFrom .fighting::after,
+#contTP #noTo .fighting::after {
+  content: "FIGHTING";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .psychic,
+#contTP #doubleTo .psychic,
+#contTP #halfFrom .psychic,
+#contTP #halfTo .psychic,
+#contTP #noFrom .psychic,
+#contTP #noTo .psychic {
+  background-color: #9f4d5b;
+}
+
+#contTP #doubleFrom .psychic::after,
+#contTP #doubleTo .psychic::after,
+#contTP #halfFrom .psychic::after,
+#contTP #halfTo .psychic::after,
+#contTP #noFrom .psychic::after,
+#contTP #noTo .psychic::after {
+  content: "PSYCHIC";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .rock,
+#contTP #doubleTo .rock,
+#contTP #halfFrom .rock,
+#contTP #halfTo .rock,
+#contTP #noFrom .rock,
+#contTP #noTo .rock {
+  background-color: #7a6910;
+}
+
+#contTP #doubleFrom .rock::after,
+#contTP #doubleTo .rock::after,
+#contTP #halfFrom .rock::after,
+#contTP #halfTo .rock::after,
+#contTP #noFrom .rock::after,
+#contTP #noTo .rock::after {
+  content: "ROCK";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .ice,
+#contTP #doubleTo .ice,
+#contTP #halfFrom .ice,
+#contTP #halfTo .ice,
+#contTP #noFrom .ice,
+#contTP #noTo .ice {
+  background-color: lightblue;
+}
+
+#contTP #doubleFrom .ice::after,
+#contTP #doubleTo .ice::after,
+#contTP #halfFrom .ice::after,
+#contTP #halfTo .ice::after,
+#contTP #noFrom .ice::after,
+#contTP #noTo .ice::after {
+  content: "ICE";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .steel,
+#contTP #doubleTo .steel,
+#contTP #halfFrom .steel,
+#contTP #halfTo .steel,
+#contTP #noFrom .steel,
+#contTP #noTo .steel {
+  background-color: LightGray;
+}
+
+#contTP #doubleFrom .steel::after,
+#contTP #doubleTo .steel::after,
+#contTP #halfFrom .steel::after,
+#contTP #halfTo .steel::after,
+#contTP #noFrom .steel::after,
+#contTP #noTo .steel::after {
+  content: "STEEL";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom .dragon,
+#contTP #doubleTo .dragon,
+#contTP #halfFrom .dragon,
+#contTP #halfTo .dragon,
+#contTP #noFrom .dragon,
+#contTP #noTo .dragon {
+  background-color: #082ce1;
+}
+
+#contTP #doubleFrom .dragon::after,
+#contTP #doubleTo .dragon::after,
+#contTP #halfFrom .dragon::after,
+#contTP #halfTo .dragon::after,
+#contTP #noFrom .dragon::after,
+#contTP #noTo .dragon::after {
+  content: "DRAGON";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#contTP #doubleFrom #noExistDamage,
+#contTP #doubleTo #noExistDamage,
+#contTP #halfFrom #noExistDamage,
+#contTP #halfTo #noExistDamage,
+#contTP #noFrom #noExistDamage,
+#contTP #noTo #noExistDamage {
+  width: 100%;
+  padding: 1rem;
+}
+
+#contTP #doubleFrom #noExistDamage p,
+#contTP #doubleTo #noExistDamage p,
+#contTP #halfFrom #noExistDamage p,
+#contTP #halfTo #noExistDamage p,
+#contTP #noFrom #noExistDamage p,
+#contTP #noTo #noExistDamage p {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: normal;
+}
+
+.contMainType .grass {
+  background-color: #40a749;
+}
+
+.contMainType .grass::after {
+  content: "GRASS";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .poison {
+  background-color: #ff00ea;
+}
+
+.contMainType .poison::after {
+  content: "POISON";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .electric {
+  background-color: goldenrod;
+}
+
+.contMainType .electric::after {
+  content: "ELETRIC";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .water {
+  background-color: #4073a7;
+}
+
+.contMainType .water::after {
+  content: "WATER";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .fire {
+  background-color: #df8600;
+}
+
+.contMainType .fire::after {
+  content: "FIRE";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .bug {
+  background-color: #8ddd94;
+}
+
+.contMainType .bug::after {
+  content: "BUG";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .flying {
+  background-color: #275296;
+}
+
+.contMainType .flying::after {
+  content: "FLYING";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .normal {
+  background-color: gray;
+}
+
+.contMainType .normal::after {
+  content: "NORMAL";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .ground {
+  background-color: #71522b;
+}
+
+.contMainType .ground::after {
+  content: "GROUND";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .fairy {
+  background-color: pink;
+}
+
+.contMainType .fairy::after {
+  content: "FAIRY";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .dark {
+  background-color: #0c0c0c;
+}
+
+.contMainType .dark::after {
+  content: "DARK";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .ghost {
+  background-color: #190722;
+}
+
+.contMainType .ghost::after {
+  content: "GHOST";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .fighting {
+  background-color: #d14141;
+}
+
+.contMainType .fighting::after {
+  content: "FIGHTING";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .psychic {
+  background-color: #9f4d5b;
+}
+
+.contMainType .psychic::after {
+  content: "PSYCHIC";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .rock {
+  background-color: #7a6910;
+}
+
+.contMainType .rock::after {
+  content: "ROCK";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .ice {
+  background-color: lightblue;
+}
+
+.contMainType .ice::after {
+  content: "ICE";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .steel {
+  background-color: LightGray;
+}
+
+.contMainType .steel::after {
+  content: "STEEL";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.contMainType .dragon {
+  background-color: #082ce1;
+}
+
+.contMainType .dragon::after {
+  content: "DRAGON";
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#mainType {
+  width: 100vw;
+  height: 10rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mainType img {
+  height: 100%;
+  margin: 0;
+}
+
+#mainType:after {
+  font-size: 40px;
+}
+
+.contentTypes {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 5rem;
+  width: 100vw;
+}
+
+@media screen and (max-width: 600px) {
+  .contentTypes {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .contentTypes {
+    padding: 0 .5rem;
+  }
+}
+
+.contentTypes .cardPokeTypes {
+  text-align: center;
+  width: 16%;
+  height: 10%;
+  border-radius: 8px;
+  background: #FFF;
+  position: relative;
+  padding: 2rem;
+  font-family: verdana, "sans-serif";
+  -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
+          box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
+  -webkit-transition: -webkit-transform 1.5s .6s ease-in-out;
+  transition: -webkit-transform 1.5s .6s ease-in-out;
+  transition: transform 1.5s .6s ease-in-out;
+  transition: transform 1.5s .6s ease-in-out, -webkit-transform 1.5s .6s ease-in-out;
+}
+
+@media screen and (max-width: 1400px) {
+  .contentTypes .cardPokeTypes {
+    width: 18%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contentTypes .cardPokeTypes {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contentTypes .cardPokeTypes {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .contentTypes .cardPokeTypes {
+    width: 80%;
+  }
+}
+
+.contentTypes .cardPokeTypes a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: color .5s ease-in-out;
+  transition: color .5s ease-in-out;
+}
+
+.contentTypes .cardPokeTypes a:hover {
+  color: #FF0000;
+}
+
+.contentTypes .cardPokeTypes a #pokeName {
+  font-size: 1vw;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .contentTypes .cardPokeTypes a #pokeName {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contentTypes .cardPokeTypes a #pokeName {
+    font-size: 1.7vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contentTypes .cardPokeTypes a #pokeName {
+    font-size: 3.2vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .contentTypes .cardPokeTypes a #pokeName {
+    font-size: 20px;
+  }
+}
+
+.contentTypes .cardPokeTypes .imgHover {
+  -webkit-transition: -webkit-transform 1.5s .3s ease-in-out;
+  transition: -webkit-transform 1.5s .3s ease-in-out;
+  transition: transform 1.5s .3s ease-in-out;
+  transition: transform 1.5s .3s ease-in-out, -webkit-transform 1.5s .3s ease-in-out;
+  width: 100%;
+}
+
+.contentTypes .cardPokeTypes .imgHover:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+@media screen and (max-width: 600px) {
+  .contentTypes .cardPokeTypes .imgHover:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.contentTypes .cardPokeTypes:hover {
+  position: relative;
+  z-index: 1;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+@media screen and (max-width: 600px) {
+  .contentTypes .cardPokeTypes:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.contentTypes .cardPokeTypes .text {
+  position: relative;
+  width: 100%;
+  height: 4vh;
+}
+
+.contentTypes .cardPokeTypes .text div {
+  position: relative;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.contentTypes .cardPokeTypes .text div p {
+  width: 50%;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1vw;
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  .contentTypes .cardPokeTypes .text div p {
+    font-size: 1.3vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contentTypes .cardPokeTypes .text div p {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contentTypes .cardPokeTypes .text div p {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .contentTypes .cardPokeTypes .text div p {
+    font-size: 18px;
+  }
+}
+
+.contentTypes .cardPokeTypes .text div #types {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 10px;
+  gap: 0.2rem;
+}
+
+.contentTypes .cardPokeTypes .text div #types img {
+  height: 100%;
+  margin: 0;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 300px) {
+  .contentTypes .cardPokeTypes .text div #types img {
+    width: 30%;
+    margin: 0;
+  }
+}
+
+#typePokeTitle {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 30px;
+  background-color: #FFF;
+  padding: 2rem 0;
+}
 /*# sourceMappingURL=main.css.map */

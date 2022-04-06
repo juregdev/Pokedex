@@ -5,11 +5,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./assets/scss/main.css">
+  <title>Types</title>
 </head>
 
 <body>
+  <main>
+    <div class="conteinerTypes">
 
+    </div>
+
+    <div id="typePokeTitle">
+      <h1>POKEMONS DESSE TIPO</h1>
+    </div>
+
+    <div class="contentTypes"></div>
+  </main>
+
+  <div id="loading">
+    <img src="./assets/img/loading/pokebola.png" id="imgLoad" alt="">
+    <h1 id="textLoad"></h1>
+  </div>
+
+  <button class="more" onclick="more()">Ver mais</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/types.js"></script>
 </body>
 
 </html>
