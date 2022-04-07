@@ -71,7 +71,7 @@ const typeIdentifier = (data) => {
   let url = "" 
   for (i in data) {
     url = url + ` 
-      <img src="./assets/img/pokemon-types/${data[i].type.name}.png" alt="">` 
+      <img src="./assets/img/pokemon-types/${data[i].type.name}.png" id="${data[i].type.name}" onclick="typeEnter(this)" alt="">` 
   }
   return url
 }
@@ -90,8 +90,13 @@ const urlImg = (dataUrl) => {
 
 //Função da pesquisa que envia o sessionStorage
 const entrar = () => {
-  sessionStorage.setItem("id", pokeSearch.value)
+  sessionStorage.setItem("id", pokeSearch.value.toLowerCase())
   window.location.href = "details.html" 
+}
+
+const typeEnter = (element) => {
+  sessionStorage.setItem("id", element.id)
+  window.location.href = "types.html" 
 }
 
 //Função que envia o sessionStorage com o id do card que foi clicado

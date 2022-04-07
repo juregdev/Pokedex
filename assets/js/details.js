@@ -9,7 +9,7 @@ const formingCard = (response) => {
   const card = `
     <div class="cardDetails transitionIn">
       <div id="titlePoke">
-        <h1 id="pokeNameDetails"> ${response.data.forms[0].name.toUpperCase()}</h1>
+        <h1 id="pokeNameDetails">${response.data.forms[0].name.toUpperCase()}</h1>
       </div>
       <div class="textDetails">
         <div class="contType">
@@ -22,25 +22,26 @@ const formingCard = (response) => {
       <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
                           
       <div id="btnAbilities">
-        <button class="abilities">
+        <button class="abilities" onclick="moves(this)">
           Abilities
         </button>
         <button class="games">
           Games
         </button>
-        <button class="evolution">
+        <button class="evolution" onclick="evolution()">
           Evolution
         </button>
       </div>
-    </div>
-    <div class="contAbilities"> 
-    </div>
-    <div class="informations transitionIn">
+      <div class="informations ">
       ${infoSearch(response.data)}
     </div>
     <div id="moreInformations" class="transitionIn" onclick="moreInfo()">
       <h1>+</h1>
     </div>
+    </div>
+    <div class="contAbilities"> 
+    </div>
+   
   `     
   document.querySelector(".conteinerDetails").innerHTML = card
 }
@@ -49,7 +50,7 @@ const formingCardNextPokemon = (response) => {
   const card = `
     <div class="cardDetails transitionInRight">
       <div id="titlePoke">
-        <h1 id="pokeNameDetails"> ${response.data.forms[0].name.toUpperCase()}</h1>
+        <h1 id="pokeNameDetails">${response.data.forms[0].name.toUpperCase()}</h1>
       </div>
       <div class="textDetails">
         <div class="contType">
@@ -62,24 +63,24 @@ const formingCardNextPokemon = (response) => {
       <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="Test">
                           
       <div id="btnAbilities">
-        <button class="abilities">
+        <button class="abilities" onclick="moves(this)">
           Abilities
         </button>
         <button class="games">
           Games
         </button>
-        <button class="evolution">
+        <button class="evolution" onclick="evolution()">
           Evolution
         </button>
       </div>
-    </div>
-    <div class="contAbilities"> 
-    </div>
-    <div class="informations transitionInRight">
+      <div class="informations ">
       ${infoSearch(response.data)}
     </div>
     <div id="moreInformations" class="transitionInRight" onclick="moreInfo()">
       <h1>+</h1>
+    </div>
+    </div>
+    <div class="contAbilities"> 
     </div>
   `     
   document.querySelector(".conteinerDetails").innerHTML = card
@@ -113,17 +114,17 @@ const cardError = () => {
     </div>`
 
 
-  document.querySelector(".conteiner").innerHTML = card
+  document.querySelector(".conteinerDetails").innerHTML = card
 }
     
 //Função para resolver problema de "-" no e acessar o item com o nome official-artwork
 const urlImg = (dataUrl) =>{
-          for(data in dataUrl){
-             if (data == 'official-artwork'){
-                let sprite = data
-                return dataUrl[sprite].front_default;
-              }
-             }
+  for(data in dataUrl){
+    if (data == 'official-artwork'){
+      let sprite = data
+      return dataUrl[sprite].front_default;
+    }
+  }
 } 
 
 //Identificador de tipos, e caso de mais de um tipo ele retorna todos
@@ -131,7 +132,7 @@ const typeIdentifier = (data) => {
   let urlImgType ="" 
   for(i in data){
     urlImgType = urlImgType + `
-     <div class="${data[i].type.name}">
+     <div class="${data[i].type.name}" id="${data[i].type.name}" onclick="typeEnter(this)">
       <img src="./assets/img/pokemon-types/${data[i].type.name}.png" id="type"  alt="">
     </div>`
   }
@@ -144,41 +145,79 @@ const typeIdentifier = (data) => {
 axios.get(`${baseUrlPokeApi}${idDetails}`).then(response =>{
       idFornextAndPrevious= response.data.id;
       formingCard(response)
+     
 }).catch(
       error => { cardError()
 })
 
+const moves = (element) => {
+
+document.querySelector(".contAbilities").innerHTML=""
+
+  if (element.style.background == "rgb(61, 125, 202)") {
+    removeMoves(element)
+  } else 
+  {
+  axios.get(`${baseUrlPokeApi}${idDetails}`).then(response =>{
+    element.style = "background: rgb(61, 125, 202); color: rgb(255, 255, 255);"
+    createMoves(response.data.moves)
+}).catch(
+    error => { cardError()
+})
+}}
+
+const removeMoves = (element) =>{
+  element.style = ""
+
+ 
+document.querySelector(".contAbilities").innerHTML=""
+  
+}
+
+const createMoves = (data) => {
+  for (i in data){
+    document.querySelector(".contAbilities").innerHTML += `<div class="move"
+    style = "animation: swing-in-top-fwd 0.5s 0.${i}s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;    
+  "
+    id=${data[i].move}>
+    <h1>${data[i].move.name}</h1>
+  </div>
+    `
+  }
+}
+
 //Função para quando o user clicar no botão do card de erro, ele redirecionar para o index
 const backIndexError = () => {window.location.href = "./index.html"}
 
-/*
+
 const moreInfo = () => {
   const info = document.querySelector("#moreInformations")
   const cardInfo = document.querySelector(".informations")
-    if (info.style.left == "22%") {
-      cardInfo.style.zIndex = "0";
-      setTimeout(() =>{ info.style.left = "32.9%";
-      cardInfo.style.left = "35%";
+    if (info.style.left == "-42%") {
+      cardInfo.style.zIndex = "-1";
+      setTimeout(() =>{ info.style.left = "-3rem";
+      cardInfo.style.left = "0";
+      cardInfo.style.opacity="0"
       info.children[0].textContent = "+"}, 170)
     } else {
-        info.style.left = "22%";
-        cardInfo.style.left = "24%";
+        info.style.left = "-42%";
+        cardInfo.style.left = "-33%";
+        cardInfo.style.opacity ="1"
         info.children[0].textContent = "-"
-        setTimeout(() =>{cardInfo.style.zIndex = "1"}, 170)
+        cardInfo.style.zIndex = "1"
       }
-    }*/
+    }
       
       
       const nextPokemon = () => {
         
         idFornextAndPrevious++
+        idDetails = idFornextAndPrevious
  
         
         axios.get(`${baseUrlPokeApi}${idFornextAndPrevious}`).then(response =>{
           document.querySelector(".cardDetails").classList.remove('transitionInRight')
           document.querySelector(".cardDetails").classList.add('transitionOutRight')
-          document.querySelector(".informations").classList.remove('transitionInRight')
-          document.querySelector(".informations").classList.add('transitionOutRight')
           document.querySelector("#moreInformations").classList.remove('transitionInRight')
           document.querySelector("#moreInformations").classList.add('transitionOutRight')
           
@@ -194,6 +233,7 @@ setTimeout(() =>{
 const previousPokemon = () => {
  
   idFornextAndPrevious--
+  idDetails = idFornextAndPrevious
    
   if (idFornextAndPrevious < 1) {
     idFornextAndPrevious = 1
@@ -202,12 +242,9 @@ const previousPokemon = () => {
   axios.get(`${baseUrlPokeApi}${idFornextAndPrevious}`).then(response =>{
     document.querySelector(".cardDetails").classList.remove('transitionIn')
     document.querySelector(".cardDetails").classList.add('transitionOut')
-    document.querySelector(".informations").classList.remove('transitionIn')
-    document.querySelector(".informations").classList.add('transitionOut')
     document.querySelector("#moreInformations").classList.remove('transitionIn')
     document.querySelector("#moreInformations").classList.add('transitionOut')
     document.querySelector("#moreInformations").classList.remove('transitionInRight')
-    document.querySelector(".informations").classList.remove('transitionInRight')
     document.querySelector(".cardDetails").classList.remove('transitionInRight')
     
 
@@ -216,4 +253,74 @@ const previousPokemon = () => {
   }).catch(
     error => { cardError()
   })}
+}
+
+const typeEnter = (element) => {
+  sessionStorage.setItem("id", element.id)
+  window.location.href = "types.html" 
+}
+
+const evolution = () => {
+  document.querySelector(".contAbilities").innerHTML=""
+  const baseEvolve ='https://pokeapi.co/api/v2/pokemon-species/'
+
+  axios.get(`${baseEvolve}${idDetails}`).then(response =>{
+    evoChains(response.data.evolution_chain.url)
+  }).catch(err =>{ console.log(err)})
+}
+
+const evoChains = (data) => {
+  axios.get(`${data}`).then(response =>{
+    evoChainsSearch(response.data.chain.species.name)
+    contEvo(response.data.chain.evolves_to)
+   
+  }).catch(err =>{ console.log(err)})
+}
+
+const contEvo = (data) => {
+if (data.length > 0) {
+  for (i in data) {
+    evoChainsSearch(data[i].species.name)
+    contEvo(data[i].evolves_to)
+  }
+} else {
+return
+}
+
+}
+
+const evoChainsSearch = (data) => {
+let nameCard =document.querySelector("#pokeNameDetails").textContent
+  if (data == nameCard.toLowerCase()) {
+console.log("caindo")
+  } else {
+  axios.get(`${baseUrlPokeApi}${data}`).then(response =>{
+    formingCardEvo(response)
+   
+  }).catch(err =>{ console.log(err)})
+}
+}
+
+const formingCardEvo = (response) => {
+  const card = `
+    <div class="card">
+      <a href="./details.html" onclick="idStorage(this)" id="${response.data.forms[0].name.toUpperCase()}" title="Clique e veja mais detalhes do  ${response.data.forms[0].name}">
+        <h1 id="pokeName"> ${response.data.forms[0].name.toUpperCase()}</h1>
+      </a>
+      <div class="text">
+        <div>
+          <div id="types">
+            ${typeIdentifier(response.data.types)}
+          </div>
+          <p id="pokeID">#${response.data.id}</p>
+        </div>
+      </div>
+      <img src="${urlImg(response.data.sprites.other)}" id="pokeImg" class="imgHover" alt="${response.data.forms[0].name}">
+    </div>`
+
+  document.querySelector(".contAbilities").innerHTML += card
+}
+
+const idStorage = (element) =>{
+  sessionStorage.setItem("id", element.id.toLowerCase())
 }

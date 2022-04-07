@@ -1,20 +1,7 @@
-#backForindex {
-  position: absolute;
-  padding: .5rem;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  text-decoration: none;
-  font-size: 15px;
-  color: $white;
-  border-radius: 3px;
-  background-color: $blue;
-  border: 1px solid $blue;
-}
-
 .conteinerDetails {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  padding-bottom: 6rem;
   position: relative;
   @include flex(column);
 
@@ -29,11 +16,10 @@
   z-index: 1;
   background: $white;
   width: 30vw;
-  top: 13%;
+  margin-top: 10%;
   padding: 3rem;
   border-radius: 8px;
   box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.68);
-  margin: 0;
 
 
   @media screen and (max-width:$big) {
@@ -97,6 +83,7 @@
         width: 70%;
         gap: 1rem;
         @include flex(row);
+        cursor: pointer;
 
         @media screen and (max-width:$big) {
           width: 90%;
@@ -411,21 +398,19 @@
 }
 
 .informations {
-  height: 40%;
-  width: 10%;
+  height: auto;
+  width: 30%;
   background: $white;
   position: absolute;
-  top: 13%;
-  left: 35%;
   border-radius: 10px;
-  z-index: 0;
   padding: 1rem;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  left: 0;
   transition: all 1s ease-in-out;
   @include flex(column);
-
-  @media screen and (max-width:$big) {
-    left: 35%
-  }
+  gap: 0.5rem;
 
   @media screen and (max-width:$mobile) {
     z-index: 1;
@@ -477,56 +462,21 @@
   text-align: center;
   @include flex(column);
   transition: all 1s ease-in-out;
-  top: 13%;
-  left: 32.9%;
+  top: 0;
+  left: -8%;
   background: $white;
   width: 5rem;
   height: 5rem;
   border-radius: 10px;
-  z-index: 0;
+  z-index: -1;
   cursor: pointer;
 
-  @media screen and (max-width:$big) {
-    left: 22%
-  }
+
 
   @media screen and (max-width:$mobile) {
     display: none;
   }
 }
-
-/*
-.arrows {
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-  width: 3vw;
-  height: 3vh;
-  @include flex(row);
-  gap: 0.5rem;
-
-
-
-  .arrowright {
-    width: 100%;
-
-    transition: transform .8s .2s ease-in-out;
-
-    &:hover {
-      transform: translateX(.5rem)
-    }
-  }
-
-  .arrowLeft {
-    width: 100%;
-    transition: transform .8s .2s ease-in-out;
-
-    &:hover {
-      transform: translateX(-.5rem)
-    }
-  }
-
-}*/
 
 .arrowLeft {
   height: 100vh;
@@ -705,4 +655,199 @@
 
 .transitionOutRight {
   animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+.contAbilities {
+  width: 80%;
+  position: relative;
+  margin-top: 3rem;
+  @include flex(row);
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  gap: 1rem;
+
+
+  .move {
+    width: 20%;
+    @include flex(row);
+    background: $white;
+    padding: .8rem;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.68);
+
+
+    border-radius: 7px;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .card {
+    text-align: center;
+    width: 20%;
+    height: 10%;
+    border-radius: 8px;
+    background: $white;
+    position: relative;
+    padding: 2rem;
+    font-family: verdana, "sans-serif";
+    box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
+    transition: transform 1.5s .6s ease-in-out;
+
+    @media screen and (max-width:$big) {
+      width: 18%
+    }
+
+    @media screen and (max-width:$normalRes) {
+      width: 30%
+    }
+
+    @media screen and (max-width:$mobile) {
+      width: 45%
+    }
+
+    @media screen and (max-width:$mobileSml) {
+      width: 80%
+    }
+
+
+    a {
+      text-decoration: none;
+      color: $black;
+      transition: color .5s ease-in-out;
+
+
+      &:hover {
+        color: $red;
+      }
+
+      #pokeName {
+        font-size: 1vw;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width:$big) {
+          font-size: 1.5vw;
+        }
+
+        @media screen and (max-width:$normalRes) {
+          font-size: 1.7vw
+        }
+
+
+        @media screen and (max-width:$mobile) {
+          font-size: 3.2vw
+        }
+
+        @media screen and (max-width:$mobileSml) {
+          font-size: 20px;
+        }
+
+      }
+    }
+
+    .imgHover {
+      transition: transform 1.5s .3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.5);
+
+        @media screen and (max-width:$mobile) {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+
+    &:hover {
+      position: relative;
+      z-index: 1;
+      transform: scale(1.5);
+
+      @media screen and (max-width:$mobile) {
+        transform: scale(1.2);
+      }
+    }
+
+    img {
+      width: 100%
+    }
+
+
+    .text {
+      position: relative;
+      width: 100%;
+      height: 2vh;
+
+      div {
+        position: relative;
+        margin: 0;
+        @include flex(row);
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+
+        p {
+          width: 50%;
+          text-align: right;
+          font-weight: bold;
+          font-size: 1vw;
+          position: absolute;
+          right: 0;
+
+          @media screen and (max-width:$big) {
+            font-size: 1.3vw
+          }
+
+
+          @media screen and (max-width:$normalRes) {
+            font-size: 2vw
+          }
+
+
+          @media screen and (max-width:$mobile) {
+            font-size: 3vw
+          }
+
+          @media screen and (max-width:$mobileSml) {
+            font-size: 18px
+          }
+
+        }
+
+        #types {
+          position: absolute;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          padding-left: 0;
+          @include flex(row);
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 0.2rem;
+
+          img {
+            width: 50%;
+            margin: 0;
+            border-radius: 100%;
+
+
+
+            @media screen and (max-width:$mobileSml) {
+              width: 30%;
+              margin: 0;
+            }
+          }
+        }
+
+
+
+
+
+
+
+      }
+    }
+  }
 }

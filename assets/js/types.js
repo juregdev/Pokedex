@@ -256,6 +256,10 @@ const testLoanding = (i) =>{
     document.querySelector("#textLoad").textContent += carregando[i]  
 }
 
+const typeEnter = (element) => {
+  sessionStorage.setItem("id", element.id)
+  window.location.href = "types.html" 
+}
 
 
 randomLoad()
