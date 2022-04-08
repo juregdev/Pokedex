@@ -24,15 +24,12 @@ const formingCard = (response) => {
       <div id="btnAbilities">
         <button class="abilities" onclick="moves(this)">
           Abilities
-        </button>
-        <button class="games">
-          Games
-        </button>
+        </button>       
         <button class="evolution" onclick="evolution()">
           Evolution
         </button>
       </div>
-      <div class="informations ">
+      <div class="informations" onclick="moreInfo()">
       ${infoSearch(response.data)}
     </div>
     <div id="moreInformations" class="transitionIn" onclick="moreInfo()">
@@ -66,14 +63,11 @@ const formingCardNextPokemon = (response) => {
         <button class="abilities" onclick="moves(this)">
           Abilities
         </button>
-        <button class="games">
-          Games
-        </button>
         <button class="evolution" onclick="evolution()">
           Evolution
         </button>
       </div>
-      <div class="informations ">
+      <div class="informations " onclick="moreInfo()">
       ${infoSearch(response.data)}
     </div>
     <div id="moreInformations" class="transitionInRight" onclick="moreInfo()">

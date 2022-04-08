@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   @include flex(column);
+  background: $white;
 }
 
 #contTP {
@@ -12,6 +13,12 @@
   height: auto;
   width: 100%;
   margin-bottom: 10%;
+
+  @media screen and (max-width:$mobile) {
+    margin-bottom: 0;
+    gap: .5rem;
+  }
+
 
   #doubleFrom,
   #doubleTo,
@@ -29,6 +36,22 @@
     margin: 0;
     position: relative;
 
+    @media screen and (max-width:$big) {
+      width: 20%;
+
+    }
+
+    @media screen and (max-width:$normalRes) {
+      width: 30%;
+
+    }
+
+    @media screen and (max-width:$mobile) {
+      width: 100%;
+      border-radius: 0px;
+
+    }
+
     h1 {
 
       width: 100%;
@@ -37,6 +60,11 @@
       padding: 1rem;
       border-radius: 10px;
       text-align: center;
+
+      @media screen and (max-width:$mobile) {
+        border-radius: 0px;
+        font-size: 4vw;
+      }
     }
 
     div {
@@ -264,6 +292,11 @@
         font-size: 14px;
         font-weight: bold;
         text-align: normal;
+
+        @media screen and (max-width:$mobile) {
+          text-align: center;
+
+        }
       }
     }
   }
@@ -473,18 +506,24 @@
 
 #mainType {
   width: 100vw;
-  height: 10rem;
+  height: 10vh;
   gap: 2rem;
   margin-bottom: 1rem;
   @include flex(row);
 
   img {
     height: 100%;
-    margin: 0
+    margin: 0;
+
+
   }
 
   &:after {
     font-size: 40px;
+
+    @media screen and (max-width:$mobile) {
+      font-size: 5vw
+    }
   }
 }
 
@@ -563,7 +602,7 @@
         }
 
         @media screen and (max-width:$mobileSml) {
-          font-size: 20px;
+          font-size: 5vw;
         }
 
       }
@@ -605,7 +644,7 @@
         @include flex(row);
         gap: 1rem;
         border-radius: 10px;
-        width: 100%;
+        align-items: flex-start;
         height: 100%;
 
         p {
@@ -631,7 +670,7 @@
           }
 
           @media screen and (max-width:$mobileSml) {
-            font-size: 18px
+            font-size: 5vw
           }
 
         }
@@ -648,14 +687,29 @@
           gap: 0.2rem;
 
           img {
-            height: 100%;
+            width: 2vw;
             margin: 0;
             border-radius: 100%;
 
 
+            @media screen and (max-width:$normalRes) {
+              width: 3vw;
+              margin: 0;
+            }
+
+            @media screen and (max-width:$normalRes) {
+              width: 4vw;
+              margin: 0;
+            }
+
+
+            @media screen and (max-width:$mobile) {
+              width: 7vw;
+              margin: 0;
+            }
 
             @media screen and (max-width:$mobileSml) {
-              width: 30%;
+              width: 10vw;
               margin: 0;
             }
           }
@@ -669,7 +723,10 @@
   width: 100%;
   text-align: center;
   margin: 2rem 0;
-  font-size: 30px;
   background-color: $white;
   padding: 2rem 0;
+
+  @media screen and (max-width:$mobile) {
+    font-size: 5vw
+  }
 }

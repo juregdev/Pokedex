@@ -10,7 +10,7 @@ let idPosition = 0
 const getAPI = () =>{
 axios.get(`${baseUrlType}${id}`).then((response) => {
   createCard(response.data)
-}).catch((error) => {console.log(error)})
+}).catch((error) => {cardError()})
 }
 
 const getPosition = (pause) =>{
@@ -23,7 +23,7 @@ const getPosition = (pause) =>{
   document.querySelector(".more").style.display = "none"
   }
 
-  }).catch((error) => {console.log(error)})
+  }).catch((error) => {cardError()})
   }
 
   const getPokemon = (data,pause) =>{
@@ -59,6 +59,21 @@ idPosition++
       i++
     }, 500)
   }
+
+//Função Formadora do card de Erro
+const cardError = () => {
+  let card = `   
+    <div class="error">
+      <img src="./assets/img/warning.png" alt="">
+      <h1>Aviso! Pokemon Não encontrado</h1>
+      <button id="btnError" onclick="backIndexError()">
+        Fechar
+      </button>
+    </div>`
+
+
+  document.querySelector(".conteinerDetails").innerHTML = card
+}
 
 const damagesIdentifiers = (response) => {
   let elementReturn = ''
@@ -128,7 +143,6 @@ const createCard = (response) => {
   document.querySelector(".conteinerTypes").innerHTML += card 
 
 }
-
 
 const more = () => {
   pausePosition = pausePosition + 11;
