@@ -32,11 +32,11 @@ Projeto proposto para estudo de consumo de api.
 #### 2 Detalhes do Pokemon selecionado
 <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(4).png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(2).jpg" width="20%">
  
-#### 2.1 Funcionabilidade 1
+#### 2.1 Botão onde mostra todos as habilidades do Pokemon
 <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/moves.png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(4).jpg" width="20%">
  
  
-#### 2.2 Funcionabilidade 2
+#### 2.2 Botão onde mostra a Arvore de Evolução do Pokemon
 <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/evo.png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(3).jpg" width="20%"> 
  
 #### 3 Infromações dos Tipos 
