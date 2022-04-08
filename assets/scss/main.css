@@ -851,6 +851,7 @@ main {
   -webkit-transition: color .5s ease-in-out;
   transition: color .5s ease-in-out;
   background: #FFF;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1400px) {

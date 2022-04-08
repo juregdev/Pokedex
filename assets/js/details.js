@@ -25,7 +25,7 @@ const formingCard = (response) => {
         <button class="abilities" onclick="moves(this)">
           Abilities
         </button>       
-        <button class="evolution" onclick="evolution()">
+        <button class="evolution" onclick="evolution(this)">
           Evolution
         </button>
       </div>
@@ -63,7 +63,7 @@ const formingCardNextPokemon = (response) => {
         <button class="abilities" onclick="moves(this)">
           Abilities
         </button>
-        <button class="evolution" onclick="evolution()">
+        <button class="evolution" onclick="evolution(this)">
           Evolution
         </button>
       </div>
@@ -203,7 +203,7 @@ const moreInfo = () => {
     }
       
       
-      const nextPokemon = () => {
+const nextPokemon = () => {
         
         idFornextAndPrevious++
         idDetails = idFornextAndPrevious
@@ -254,13 +254,19 @@ const typeEnter = (element) => {
   window.location.href = "types.html" 
 }
 
-const evolution = () => {
+const evolution = (element) => {
   document.querySelector(".contAbilities").innerHTML=""
+  if (element.style.background == "rgb(61, 125, 202)") {
+    removeMoves(element)
+  } else 
+  {
   const baseEvolve ='https://pokeapi.co/api/v2/pokemon-species/'
 
   axios.get(`${baseEvolve}${idDetails}`).then(response =>{
+    element.style = "background: rgb(61, 125, 202); color: rgb(255, 255, 255);"
     evoChains(response.data.evolution_chain.url)
-  }).catch(err =>{ console.log(err)})
+
+  }).catch(err =>{ console.log(err)})}
 }
 
 const evoChains = (data) => {
