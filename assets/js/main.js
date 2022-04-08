@@ -76,8 +76,6 @@ const typeIdentifier = (data) => {
   return url
 }
 
-
-
 //Função para resolver problema de "-" no e acessar o item com o nome official-artwork
 const urlImg = (dataUrl) => {
   for (data in dataUrl) {
@@ -94,11 +92,6 @@ const entrar = () => {
   window.location.href = "details.html" 
 }
 
-const typeEnter = (element) => {
-  sessionStorage.setItem("id", element.id)
-  window.location.href = "types.html" 
-}
-
 //Função que envia o sessionStorage com o id do card que foi clicado
 const idStorage = (element) =>{
   sessionStorage.setItem("id", element.id.toLowerCase())
@@ -111,7 +104,7 @@ function getRandomIntInclusive (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//Função que seleciona a foto da telad de Loading
+//Função que seleciona a foto da tela de Loading
 const randomLoad = () => {
   let ramdom = getRandomIntInclusive(1,9);
   let element = document.querySelector("#imgLoad")
@@ -175,6 +168,7 @@ const randomLoad = () => {
   }
 }
 
+//Adiciona letras do carregando é puxado pelo setInterval
 const testLoanding = (i) =>{
   const carregando = ['C', 'A', 'R', 'R', 'E', 'G', 'A', 'N', 'D', 'O']
     document.querySelector("#textLoad").textContent += carregando[i]
