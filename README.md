@@ -5,7 +5,7 @@
 Projeto proposto para estudo de consumo de api.
 
 ## API Usada
-[![PokeApi](https://avatars.githubusercontent.com/u/64151210?v=4)](https://pokeapi.co/)
+[![PokeApi](https://github.com/Filipebarrosg/assents/blob/main/Pokedex/pokeapi.png)](https://pokeapi.co/)
 
   
 ## Tecnologias Usadas
@@ -16,15 +16,21 @@ Projeto proposto para estudo de consumo de api.
 
 ## ScreenShot
 
-### Desktop
 
-<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(1).png">
-<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(2).png">
+
+#### 1 Tela Inicial
 <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(3).png">
+
+#### 1.1 Carregamento
+<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(2).png">
+
+#### 2 Detalhes do Pokemon selecionado
 <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(4).png">
+
+#### 3 Informações dos tipos de pokemon
 <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(5).png">
 
-### Mobile
+
 
 <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(1).jpg" width="200px"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(2).jpg" width="200px"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(3).jpg" width="200px"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(4).jpg" width="200px"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(5).jpg" width="200px"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(6).jpg" width="200px">
 
