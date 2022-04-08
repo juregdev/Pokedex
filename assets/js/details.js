@@ -292,7 +292,7 @@ return
 const evoChainsSearch = (data) => {
 let nameCard =document.querySelector("#pokeNameDetails").textContent
   if (data == nameCard.toLowerCase()) {
-console.log("caindo")
+return
   } else {
   axios.get(`${baseUrlPokeApi}${data}`).then(response =>{
     formingCardEvo(response)
