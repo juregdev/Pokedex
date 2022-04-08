@@ -4,6 +4,11 @@
 
 Projeto proposto para estudo de consumo de api.
 
+### GitHub Pages
+[![Pages](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)](https://filipebarrosg.github.io/Pokedex/)
+
+
+
 ## API Usada
 [![PokeApi](https://github.com/Filipebarrosg/assents/blob/main/Pokedex/pokeapi.png)](https://pokeapi.co/)
 
@@ -22,21 +27,26 @@ Projeto proposto para estudo de consumo de api.
 <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(3).png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(1).jpg" width="20%">
 
 #### 1.1 Carregamento
-<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(2).png">
-
+<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(2).png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/carregar%20mobile.jpg" width="20%">
 
 #### 2 Detalhes do Pokemon selecionado
-<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(4).png">
-<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(2).jpg" width="200px">
+<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(4).png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(2).jpg" width="20%">
  
 #### 2.1 Funcionabilidade 1
+<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/moves.png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(4).jpg" width="20%">
+ 
+ 
+#### 2.2 Funcionabilidade 2
+<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/evo.png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(3).jpg" width="20%"> 
+ 
+#### 3 Infromações dos Tipos 
+<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(6).png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(5).jpg" width="20%">
 
 
-#### 3 Informações dos tipos de pokemon
-<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(5).png">
-<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(5).jpg" width="200px">
+
+#### 3.1 Informações dos pokemons do tipo selecionado
+<img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Desktop%20(5).png" width="70%"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(6).jpg" width="20%">
 
 
 
- <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(3).jpg" width="200px"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(4).jpg" width="200px"> <img src="https://github.com/Filipebarrosg/assents/blob/main/Pokedex/Mobile%20(6).jpg" width="200px">
 
