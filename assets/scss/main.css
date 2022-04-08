@@ -192,10 +192,10 @@ main {
   font-family: verdana, "sans-serif";
   -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
           box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.68);
-  -webkit-transition: -webkit-transform 1.5s .6s ease-in-out;
-  transition: -webkit-transform 1.5s .6s ease-in-out;
-  transition: transform 1.5s .6s ease-in-out;
-  transition: transform 1.5s .6s ease-in-out, -webkit-transform 1.5s .6s ease-in-out;
+  -webkit-transition: -webkit-transform 1s .5s ease-in-out;
+  transition: -webkit-transform 1s .5s ease-in-out;
+  transition: transform 1s .5s ease-in-out;
+  transition: transform 1s .5s ease-in-out, -webkit-transform 1s .5s ease-in-out;
 }
 
 @media screen and (max-width: 1400px) {
@@ -263,10 +263,10 @@ main {
 }
 
 .conteiner .content .card .imgHover {
-  -webkit-transition: -webkit-transform 1.5s .3s ease-in-out;
-  transition: -webkit-transform 1.5s .3s ease-in-out;
-  transition: transform 1.5s .3s ease-in-out;
-  transition: transform 1.5s .3s ease-in-out, -webkit-transform 1.5s .3s ease-in-out;
+  -webkit-transition: -webkit-transform 1s .3s ease-in-out;
+  transition: -webkit-transform 1s .3s ease-in-out;
+  transition: transform 1s .3s ease-in-out;
+  transition: transform 1s .3s ease-in-out, -webkit-transform 1s .3s ease-in-out;
 }
 
 .conteiner .content .card .imgHover:hover {
