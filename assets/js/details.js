@@ -185,6 +185,11 @@ const backIndexError = () => {window.location.href = "./index.html"}
 
 
 const moreInfo = () => {
+
+  if (screen.width <= 600) {
+    return
+  } else {
+
   const info = document.querySelector("#moreInformations")
   const cardInfo = document.querySelector(".informations")
     if (info.style.left == "-42%") {
@@ -201,6 +206,7 @@ const moreInfo = () => {
         cardInfo.style.zIndex = "1"
       }
     }
+  }
       
       
 const nextPokemon = () => {
@@ -214,8 +220,9 @@ const nextPokemon = () => {
           document.querySelector(".cardDetails").classList.add('transitionOutRight')
           document.querySelector("#moreInformations").classList.remove('transitionInRight')
           document.querySelector("#moreInformations").classList.add('transitionOutRight')
+    
           
-   
+        
               
 setTimeout(() =>{
   formingCardNextPokemon(response)},500)
@@ -303,7 +310,7 @@ return
 
 const formingCardEvo = (response) => {
   const card = `
-    <div class="card">
+    <div class="card" style = "animation: swing-in-top-fwd 0.5s 0.${i}s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;">
       <a href="./details.html" onclick="idStorage(this)" id="${response.data.forms[0].name.toUpperCase()}" title="Clique e veja mais detalhes do  ${response.data.forms[0].name}">
         <h1 id="pokeName"> ${response.data.forms[0].name.toUpperCase()}</h1>
       </a>
