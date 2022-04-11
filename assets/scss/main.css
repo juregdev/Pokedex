@@ -907,7 +907,7 @@ main {
 
 #backForindex {
   position: fixed;
-  z-index: 12;
+  z-index: 9;
   padding: .5rem;
   top: 0;
   left: 0;
@@ -945,6 +945,7 @@ main {
 
 #loading {
   position: fixed;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
