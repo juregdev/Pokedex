@@ -761,14 +761,46 @@ main {
           justify-content: center;
 }
 
+@media screen and (max-width: 600px) {
+  .error {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+  }
+}
+
 .error img {
   width: 20%;
+}
+
+@media screen and (max-width: 1000px) {
+  .error img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .error img {
+    width: 50%;
+  }
 }
 
 .error h1 {
   font-size: 2vw;
   padding: auto 4rem;
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .error h1 {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .error h1 {
+    font-size: 6vw;
+  }
 }
 
 .more {

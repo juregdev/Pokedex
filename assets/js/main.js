@@ -89,12 +89,14 @@ const urlImg = (dataUrl) => {
 //Função da pesquisa que envia o sessionStorage
 const entrar = () => {
   sessionStorage.setItem("id", pokeSearch.value.toLowerCase())
+  sessionStorage.setItem("idPrevious", pokeSearch.value.toLowerCase())
   window.location.href = "details.html" 
 }
 
 //Função que envia o sessionStorage com o id do card que foi clicado
 const idStorage = (element) =>{
   sessionStorage.setItem("id", element.id.toLowerCase())
+  sessionStorage.setItem("idPrevious", element.id.toLowerCase())
 }
 
 //função usada na tela de carregamento, fazendo um ramdom para imagens

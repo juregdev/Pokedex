@@ -173,6 +173,7 @@ const typeIdentifier = (data) => {
 //Buscador que encontra os Movimentos do pokemon da pagina
 const moves = (element) => {
   document.querySelector(".contAbilities").innerHTML=""
+  document.querySelector(".evolution").style = ""
   if (element.style.background == "rgb(61, 125, 202)") {
     removeMoves(element)
   } else {
@@ -257,12 +258,14 @@ const previousPokemon = () => {
 //Gravador do ID type e redireciona para a pagina Types
 const typeEnter = (element) => {
   sessionStorage.setItem("id", element.id)
+  sessionStorage.idPrevious = idDetails
   window.location.href = "types.html" 
 }
 
 //Função de evolução
 const evolution = (element) => {
   document.querySelector(".contAbilities").innerHTML=""
+  document.querySelector(".abilities").style = ""
   if (element.style.background == "rgb(61, 125, 202)") {
     removeMoves(element)
   } else {
@@ -328,3 +331,10 @@ axios.get(`${baseUrlPokeApi}${idDetails}`).then(response =>{
 }).catch(error => { 
     cardError()
 })
+
+const backPrevious = () => {
+  sessionStorage.id = sessionStorage.idPrevious
+  sessionStorage.idPrevious = idDetails
+  window.history.back()
+}
+

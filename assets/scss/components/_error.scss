@@ -9,14 +9,36 @@
   height: 50vh;
   @include flex(column);
 
+  @media screen and (max-width:$mobile) {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+  }
+
   img {
     width: 20%;
+
+    @media screen and (max-width:$normalRes) {
+      width: 40%;
+    }
+
+    @media screen and (max-width:$mobile) {
+      width: 50%;
+    }
   }
 
   h1 {
     font-size: 2vw;
     padding: auto 4rem;
     text-align: center;
+
+    @media screen and (max-width:$mobile) {
+      font-size: 4vw;
+    }
+
+    @media screen and (max-width:$mobileSml) {
+      font-size: 6vw;
+    }
   }
 
 

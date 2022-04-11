@@ -44,6 +44,7 @@ const getPokemon = (data,pause) =>{
       }).catch((error) => {
         cardError()
       })
+      idPosition++
     } else {
         document.querySelector("#loading").classList.remove("visibleLoading")
         document.querySelector("#loading").classList.add("invisibleLoading")   
@@ -51,7 +52,7 @@ const getPokemon = (data,pause) =>{
         clearInterval(timer)
         clearInterval(time)
     }
-    idPosition++
+   
   },200)
   let i = 0
   document.querySelector("#textLoad").textContent = ''
@@ -195,6 +196,7 @@ const typeIdentifier = (data) => {
 //Função que envia o sessionStorage com o id do card que foi clicado e recarrega a pagina para colocar o tipo desejado 
 const idStorage = (element) =>{
   sessionStorage.setItem("id", element.id.toLowerCase())
+  sessionStorage.idPrevious = id
   location.reload()
 }
 
@@ -278,8 +280,16 @@ const testLoanding = (i) =>{
 //Caso queira trocar de tipo mostrado
 const typeEnter = (element) => {
   sessionStorage.setItem("id", element.id)
+  sessionStorage.setItem("idPrevious", id)
   window.location.href = "types.html" 
 }
+
+const backPrevious = () => {
+  sessionStorage.id = sessionStorage.idPrevious
+  sessionStorage.idPrevious = id 
+  window.history.back()
+}
+
 
 //Funções executadas assim que a tela é carregada
 randomLoad()
